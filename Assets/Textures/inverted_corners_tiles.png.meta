@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f94c1dcd81af0504d90c1519b8413ffa
+guid: 0f0523416e967b64294a0c2b471fb83e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_0
+      name: inverted_corners_tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cebf4c95c18bce54aa97becb5479c40b
-      internalID: 457289735
+      spriteID: ea5c04d31d45fff428360980022ae607
+      internalID: 1608179493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_1
+      name: inverted_corners_tiles_1
       rect:
         serializedVersion: 2
         x: 16
@@ -152,35 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e42a9343255e884bb1791c3c6ba6d84
-      internalID: 1091503324
+      spriteID: a12730a31ac826441815ebd2af70ab89
+      internalID: -241741916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e23a75739653b5479eaf1e907c40d4b
-      internalID: 1358058156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirtin_grassout_tiles_3
+      name: inverted_corners_tiles_2
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ddb123257b62c54098443580e0ed2b9
-      internalID: -470385815
+      spriteID: 54ae002cbf05a1540a837616b75e8807
+      internalID: -1483904367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_4
+      name: inverted_corners_tiles_3
       rect:
         serializedVersion: 2
         x: 16
@@ -215,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66ff1909d8c33f1468bb5b59e8634e66
-      internalID: 585694275
+      spriteID: e38f6c24ead5c1a4497b84127c04ec53
+      internalID: -2029079413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_5
+      name: inverted_corners_tiles_4
       rect:
         serializedVersion: 2
         x: 32
@@ -236,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ef7394ebd536a42a59def0bd0796b1
-      internalID: -537107752
+      spriteID: 7a356596dc0e0ca45a3acd9b36ec2efd
+      internalID: -1800362308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_6
+      name: inverted_corners_tiles_5
       rect:
         serializedVersion: 2
         x: 0
@@ -257,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040528bad03613e41a7ffe16868efc72
-      internalID: -903950784
+      spriteID: 8f8e67ebcf743104c90754c4d68fe5db
+      internalID: 636113029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_7
+      name: inverted_corners_tiles_6
       rect:
         serializedVersion: 2
         x: 16
@@ -278,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d141f27f32f60be48a8f2c19214a3fcf
-      internalID: 1724841312
+      spriteID: 358689e5e787a7c4f80432dd6fb54da1
+      internalID: 1728466692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirtin_grassout_tiles_8
+      name: inverted_corners_tiles_7
       rect:
         serializedVersion: 2
         x: 32
@@ -299,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e5cf60cf8d4de41bc396682358c3b8
-      internalID: -523356179
+      spriteID: fff896cc1285fcb4fa3a21321c672190
+      internalID: -819625344
       vertices: []
       indices: 
       edges: []
@@ -316,15 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dirtin_grassout_tiles_5: -537107752
-      dirtin_grassout_tiles_8: -523356179
-      dirtin_grassout_tiles_3: -470385815
-      dirtin_grassout_tiles_6: -903950784
-      dirtin_grassout_tiles_0: 457289735
-      dirtin_grassout_tiles_2: 1358058156
-      dirtin_grassout_tiles_7: 1724841312
-      dirtin_grassout_tiles_1: 1091503324
-      dirtin_grassout_tiles_4: 585694275
+      inverted_corners_tiles_0: 1608179493
+      inverted_corners_tiles_3: -2029079413
+      inverted_corners_tiles_4: -1800362308
+      inverted_corners_tiles_7: -819625344
+      inverted_corners_tiles_2: -1483904367
+      inverted_corners_tiles_1: -241741916
+      inverted_corners_tiles_5: 636113029
+      inverted_corners_tiles_6: 1728466692
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
