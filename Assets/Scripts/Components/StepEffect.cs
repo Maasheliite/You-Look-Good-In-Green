@@ -24,7 +24,6 @@ public class StepEffect : MonoBehaviour
         float rippleIntensity = 0.001f;
         float timer = 0;
 
-
         float startTime = Time.time;
 
 
