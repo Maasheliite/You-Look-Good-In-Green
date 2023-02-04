@@ -11,7 +11,8 @@ public class Actor : MonoBehaviour
 
     private void OnEnable()
     {
-        highlight = Instantiate(highlightPrefab,transform.position+Vector3.up,Quaternion.identity);
+        highlight = Instantiate(highlightPrefab,transform);
+        highlight.transform.position += Vector3.up;
         highlight.SetActive(false);
     }
     private void Update()
