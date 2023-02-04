@@ -19,11 +19,11 @@ public class TeleporterEditor : Editor
 
         if (target != null)
         {
-            Vector3 distance = teleporter.transform.position - teleporter.target.transform.position;
+            Vector2 distance = teleporter.transform.position - teleporter.target.transform.position;
             Handles.color = Color.red;
             Handles.DrawLine(teleporter.transform.position, teleporter.target.transform.position, 2f);
             Handles.Label(teleporter.transform.position, teleporter.name);
-            Handles.Label(teleporter.transform.position - distance / 2 + distance.normalized , " connected to ");
+            Handles.Label((Vector2)teleporter.transform.position - (distance / 2) , " connected to ");
             Handles.Label(teleporter.target.transform.position, teleporter.target.name);
         }
     }

@@ -5,11 +5,17 @@ using Nizu.Util;
 using UnityEditor;
 
 [System.Serializable]
+[RequireComponent(typeof(Collider))]
 public class Teleporter : MonoBehaviour, IInteractable
 {
     public GameObject target;
     [field:SerializeField]
     public KeyCode interactButton { get; set; } = KeyCode.None;
+
+    public GameObject getGameObject()
+    {
+        return gameObject;
+    }
 
     public void Interact(GameObject actor)
     {
