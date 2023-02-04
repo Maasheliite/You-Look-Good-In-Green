@@ -14,6 +14,6 @@ public class Teleporter : MonoBehaviour, IInteractable
     public void Interact(GameObject actor)
     {
        Vector3 distance = gameObject.transform.position - target.transform.position;
-        actor.transform.position = actor.transform.position + distance;
+        actor.transform.position = actor.transform.position - distance;
     }
 }
