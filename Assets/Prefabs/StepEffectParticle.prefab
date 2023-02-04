@@ -47,8 +47,8 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
-  looping: 1
+  emitterVelocityMode: 0
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -108,7 +108,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 2
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -169,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
+      scalar: 0.0000001
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -221,7 +221,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 4
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -661,15 +661,15 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 8
     angle: 0
-    length: 1
+    length: 0
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.75, y: 0.75, z: 1}
+    m_Scale: {x: 1.5, y: 1.5, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -736,14 +736,14 @@ ParticleSystem:
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
-    m_Texture: {fileID: 2800000, guid: e0f306cf21e1cb942ad75ce3aea880b2, type: 3}
+    alignToDirection: 1
+    m_Texture: {fileID: 0}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
     m_TextureUVChannel: 0
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 0
-    m_TextureBilinearFiltering: 0
+    m_TextureBilinearFiltering: 1
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
@@ -1042,16 +1042,16 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
+          value: 0.8239444
+          inSlope: 1.4226104
+          outSlope: 1.4226104
+          tangentMode: 34
+          weightedMode: 1
           inWeight: 0
-          outWeight: 0
+          outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.49536252
-          value: 0.754616
+          time: 0.12375533
+          value: 1
           inSlope: 0.013487515
           outSlope: 0.013487515
           tangentMode: 0
@@ -1060,12 +1060,12 @@ ParticleSystem:
           outWeight: 0.34145528
         - serializedVersion: 3
           time: 1
-          value: 0
-          inSlope: -2
-          outSlope: -2
+          value: 0.79577637
+          inSlope: 0.38849744
+          outSlope: 0.38849744
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0
+          inWeight: 0.28736505
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1364,7 +1364,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1372,9 +1372,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1389,21 +1389,21 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
+        atime1: 21203
+        atime2: 32768
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 4
       minGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 1, g: 1, b: 1, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1411,23 +1411,23 @@ ParticleSystem:
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
         ctime1: 65535
-        ctime2: 0
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
-        atime2: 0
-        atime3: 0
-        atime4: 0
+        atime1: 21203
+        atime2: 43369
+        atime3: 65535
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 4
   UVModule:
     serializedVersion: 2
     enabled: 1
@@ -1540,7 +1540,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    speedRange: {x: 0, y: 1}
+    speedRange: {x: 0, y: 0.0000001}
     tilesX: 1
     tilesY: 1
     animationType: 0
@@ -1549,15 +1549,15 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 1636843730, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 849544629, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 1447873631, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 1774112927, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 303852364, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: -1752979384, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 1969621192, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 2127142301, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-    - sprite: {fileID: 1336498645, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
+    - sprite: {fileID: 824576271, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 1966304020, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: -1587938545, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 165784498, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 1513582809, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 1240457778, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 1536008210, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 418346249, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
+    - sprite: {fileID: 88336253, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4836,7 +4836,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6dc7f87f4efb2fb428b5f242e1b12ae5, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4866,19 +4866,19 @@ ParticleSystemRenderer:
   m_VelocityScale: 0
   m_LengthScale: 2
   m_SortingFudge: 0
-  m_NormalDirection: 1
+  m_NormalDirection: 0.09
   m_ShadowBias: 0
-  m_RenderAlignment: 0
+  m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
-  m_AllowRoll: 1
+  m_AllowRoll: 0
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
