@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 direction;
 
     private bool isAttacking;
-    private float attackDelay = .7f;
+    private float attackDelay = 2f;
 
     private Vector2 dist;
 
@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isAttacking", true);
 
                 isAttacking = true;
-                Invoke("Attack", .1f);
+                Invoke("Attack", .6f);
                 Invoke("ResetAttack", attackDelay);
             }
         }
@@ -132,18 +132,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Attack()
     {
-        AttackLocation.transform.position = rb.position + dist * direction;
         GameObject b = Instantiate(AttackObject);
         b.transform.position = AttackLocation.transform.position;
-        if (direction.y == -1 || direction.y == 1)
-        {
-            b.transform.localRotation = Quaternion.Euler(0, 0, 90);
-        }
-        else if (direction.x == -1 || direction.x == 1)
-        {
-            b.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-        Destroy(b, 0.5f);
+
+        Destroy(b, 1.5f);
     }
 
 
