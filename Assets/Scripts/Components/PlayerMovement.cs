@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
 
-    public GameObject Slash;
-    public Transform Slashpoint;
+    public GameObject AttackObject;
+    public Transform AttackLocation;
     private bool stopFighting;
 
     public float moveSpeed = 5f;
@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 direction;
 
-    private bool isShooting;
-    private float shootDelay = .7f;
+    private bool isAttacking;
+    private float attackDelay = .7f;
 
     private Vector2 dist;
 
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (!isShooting)
+        if (!isAttacking)
         {
             animator.SetFloat("Horizontal", direction.x);
             animator.SetFloat("Vertical", direction.y);
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        else if (isShooting)
+        else if (isAttacking)
         {
             animator.SetFloat("Horizontal", direction.x);
             animator.SetFloat("Vertical", direction.y);
@@ -85,14 +85,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                if (isShooting) return;
+                if (isAttacking) return;
 
                 animator.SetBool("isAttacking", true);
 
-                isShooting = true;
-                Invoke("ActuallyShoot", .1f);
-                Invoke("ResetShoot", shootDelay);
-
+                isAttacking = true;
+                Invoke("Attack", .1f);
+                Invoke("ResetAttack", attackDelay);
             }
         }
 
@@ -102,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isShooting && (movement.x != 0 || movement.y != 0) && !notClimbing)
+        if (!isAttacking && (movement.x != 0 || movement.y != 0) && !notClimbing)
         {
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -124,18 +123,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void ResetShoot()
+    private void ResetAttack()
     {
         animator.SetBool("isAttacking", false);
-        isShooting = false;
+        isAttacking = false;
 
     }
 
-    private void ActuallyShoot()
+    private void Attack()
     {
-        Slashpoint.transform.position = rb.position + dist * direction;
-        GameObject b = Instantiate(Slash);
-        b.transform.position = Slashpoint.transform.position;
+        AttackLocation.transform.position = rb.position + dist * direction;
+        GameObject b = Instantiate(AttackObject);
+        b.transform.position = AttackLocation.transform.position;
         if (direction.y == -1 || direction.y == 1)
         {
             b.transform.localRotation = Quaternion.Euler(0, 0, 90);

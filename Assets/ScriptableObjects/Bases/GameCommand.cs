@@ -9,12 +9,7 @@ namespace Nizu.Util.ScriptableObjects
     {
         public FloatVariable variableToModify;
 
-        public void SetValue(float val)
-        {
-            variableToModify.Value = val;
-        }
-
-        public void IncreaseValue(float val)
+       public void IncreaseValue(float val)
         {
             variableToModify.Value += val;
         }

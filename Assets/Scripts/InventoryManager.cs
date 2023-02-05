@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        inventory.ForEach(x => x.SetValue(0));
+        inventory.ForEach(x => x.variableToModify.Value = 0);
     }
 
 }
