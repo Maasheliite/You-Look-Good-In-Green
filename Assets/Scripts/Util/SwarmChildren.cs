@@ -56,4 +56,15 @@ public class SwarmChildren : MonoBehaviour
             children[i].position = Vector3.MoveTowards(children[i].position, children[i].position + new Vector3(directions[i].x, directions[i].y, 0), step);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("collision");
+        if (collision.gameObject.tag == "Attack")
+        {
+            Destroy(gameObject);
+
+        }
+
+
+    }
 }
