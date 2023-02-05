@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class MapDisplay : MonoBehaviour
 {
+    public Camera main;
+    public Camera mapCam;
     public GameObject MapOverlay;
-    public GameObject Frame;
-    public GameObject Circle;
+    public GameObject[] mapObjects;
 
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            main.gameObject.SetActive(false);
+            mapCam.gameObject.SetActive(true);
             MapOverlay.SetActive(true);
-            Frame.SetActive(true);
-            Circle.SetActive(true);
+            foreach (GameObject obj in mapObjects)
+            {
+                obj.SetActive(true);
+            }
 
         }
 
 
-
         if (Input.GetKeyUp(KeyCode.Tab))
         {
-
+            main.gameObject.SetActive(true);
+            mapCam.gameObject.SetActive(false);
             MapOverlay.SetActive(false);
-            Frame.SetActive(false);
-            Circle.SetActive(false);
+            foreach (GameObject obj in mapObjects)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 

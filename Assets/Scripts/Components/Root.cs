@@ -21,6 +21,7 @@ public class Root : MonoBehaviour, IInteractable
     private Slider slider;
     public GameObject dangerPrefab;
     public SetSelfInactive costElement;
+    public SpriteRenderer mapElement;
     private GameObject dangerInstance;
     public UnityEvent loseObjectiveEvent;
     public UnityEvent completeObjectiveEvent;
@@ -39,7 +40,7 @@ public class Root : MonoBehaviour, IInteractable
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         slider = GetComponentInChildren<Slider>();    
-        SetDanger();
+        SetDamaged();
     }
     private void Update()
     {
@@ -74,14 +75,15 @@ public class Root : MonoBehaviour, IInteractable
 
     public void SetDanger()
     {
-        dangerInstance = Instantiate(dangerPrefab);
+        dangerInstance = Instantiate(dangerPrefab,transform);
         state = RootState.DANGER;
         loseObjectiveEvent.Invoke();
         slider.gameObject.SetActive(true);
         timer = attackDuration.Value;
         slider.maxValue = timer;
         spriteRenderer.color = new Color(255,127,0);
-    }
+        mapElement.color = new Color(255, 127, 0);
+}
     public void SetHealthy()
     {
         state = RootState.HEALTHY;
@@ -89,12 +91,14 @@ public class Root : MonoBehaviour, IInteractable
         slider.gameObject.SetActive(false);
         timer = attackIntervalTimeMinimum.Value + Random.Range(0,attackIntervalTimeMax.Value);
         spriteRenderer.color = Color.white;
+        mapElement.color = Color.white;
     }
     public void SetDamaged()
     {
         state = RootState.DAMAGED;
         slider.gameObject.SetActive(false);
         spriteRenderer.color = Color.red;
+        mapElement.color = Color.red;
     }
 
     public void Interact(GameObject actor)
@@ -128,7 +132,9 @@ public class Root : MonoBehaviour, IInteractable
 
     public void onHighlight()
     {
-        costElement.gameObject.SetActive(true);
-        costElement.display();
+        if(state == RootState.DAMAGED) { 
+            costElement.gameObject.SetActive(true);
+            costElement.display();
+        }
     }
 }

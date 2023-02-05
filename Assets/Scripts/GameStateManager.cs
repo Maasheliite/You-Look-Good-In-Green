@@ -14,11 +14,12 @@ public class GameStateManager : MonoBehaviour
         completedObjectives -= 1;
     }
 
-    public void checkWin()
+    public bool checkWin()
     {
         if (completedObjectives == 4)
         {
-            //win
+            return true;
         }
+        return false;
     }
 }

@@ -31,14 +31,14 @@ public class Actor : MonoBehaviour
     {
         if (closestInteractable == null)
         {
-            highlight.transform.SetParent(transform, false);
+            highlight.transform.position = transform.position;
             highlight.SetActive(false);
         }
         else
         {
             closestInteractable.onHighlight();
             highlight.SetActive(true);
-            highlight.transform.SetParent(closestInteractable.getGameObject().transform, false);
+            highlight.transform.position = closestInteractable.getGameObject().transform.position+ Vector3.up;
         }
     }
     private IInteractable GetClosestInteractable()

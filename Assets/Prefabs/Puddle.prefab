@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6950004473263467466}
   - component: {fileID: 2050791644225104621}
   - component: {fileID: 9036921871002770451}
+  - component: {fileID: 1736497813174615210}
   m_Layer: 0
   m_Name: Puddle
   m_TagString: Untagged
@@ -101,3 +102,19 @@ MonoBehaviour:
   deathTimerMax: 1
   itemCommand: {fileID: 11400000, guid: 2dc582404739bc1498720d4c8712dd7a, type: 2}
   increaseValue: 1
+--- !u!70 &1736497813174615210
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365996102765854279}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000006997226, y: -0.058696993}
+  m_Size: {x: 1.0000002, y: 0.62173426}
+  m_Direction: 1

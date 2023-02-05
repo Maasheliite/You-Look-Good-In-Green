@@ -123,24 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &48757355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 922516938097275309, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-  m_PrefabInstance: {fileID: 6505883416870262891}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &48757360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48757355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ebbcbe86ac5964cb893d1225c3d6ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerMax: 2
 --- !u!1 &170501832
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,38 +168,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &570786093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8643532666378790124, guid: d369d5c84648c5149aa22664383c15d3, type: 3}
-  m_PrefabInstance: {fileID: 5100935577557698015}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &570786097
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570786093}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.38601026
---- !u!114 &798852109 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 798852109, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-  m_PrefabInstance: {fileID: 6505883416870262891}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &934187066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,17 +3120,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1481685125 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4953999988906679053, guid: d369d5c84648c5149aa22664383c15d3, type: 3}
-  m_PrefabInstance: {fileID: 5100935577557698015}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ebbcbe86ac5964cb893d1225c3d6ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1545715675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,10 +3549,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6052140051805416633, guid: d369d5c84648c5149aa22664383c15d3, type: 3}
-      propertyPath: costElement
-      value: 
-      objectReference: {fileID: 1481685125}
     - target: {fileID: 8643532666378790124, guid: d369d5c84648c5149aa22664383c15d3, type: 3}
       propertyPath: m_Name
       value: Tree
@@ -3627,36 +3562,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 798852107, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1158334905, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 798852109}
-    - target: {fileID: 1158334905, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-      propertyPath: costElement
-      value: 
-      objectReference: {fileID: 48757360}
     - target: {fileID: 1768262687, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1768262687, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1784543386, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1784543386, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 922516938097275309, guid: 11685299a473f154daa258ee140c0ba3, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6505883415745843676, guid: 11685299a473f154daa258ee140c0ba3, type: 3}

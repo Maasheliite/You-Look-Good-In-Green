@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3156242763012406002}
   - component: {fileID: 8212799365117559574}
   - component: {fileID: 2575347064521298413}
+  - component: {fileID: -3682659957441694134}
+  - component: {fileID: 5675891954896497569}
   m_Layer: 0
   m_Name: MagicAttack_0
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 375826331
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1920831631, guid: 80b8ff6e331c6c24090354e3a4f585e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,3 +107,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-3682659957441694134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332915967631122260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1eecf123018bde4c85022b38034dfd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &5675891954896497569
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7332915967631122260}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 7, y: 2}
+  m_Direction: 1

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8603853122930714868}
   - component: {fileID: 2276058572953090606}
   - component: {fileID: 3035281019847365148}
-  - component: {fileID: 5108720648939325318}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -136,23 +135,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &5108720648939325318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202225867151456697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee697f91e02f68e4bbb90c001cf2049d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variable:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 15720ee8dd1d8ab428645353f2f7ffa1, type: 2}
-  text: {fileID: 3035281019847365148}
 --- !u!1 &3344769497948184059
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,8 +194,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: 375826331
+  m_SortingOrder: 666
   m_TargetDisplay: 0
 --- !u!114 &2943124097977893195
 MonoBehaviour:
@@ -372,7 +354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e2547860ca9b9914c8fb30262ad97b36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59942055efa1c7e45a8b56c1e2969548, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -455,9 +437,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 375826331
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 21903953f54e8334687a775d2ef9956a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -484,11 +466,11 @@ MonoBehaviour:
   restoredSprite: {fileID: 21300000, guid: 36f78021da869cd4e99aa173356865b0, type: 3}
   costElement: {fileID: 4953999988906679053}
   essenceResource: {fileID: 11400000, guid: 9eb39c46f9c5245449481ad9b3c8b1df, type: 2}
-  decreaseValue: 3
+  decreaseValue: 5
   winGame:
     m_PersistentCalls:
       m_Calls: []
-  <interactButton>k__BackingField: 0
+  <interactButton>k__BackingField: 32
 --- !u!58 &570786097
 CircleCollider2D:
   m_ObjectHideFlags: 0

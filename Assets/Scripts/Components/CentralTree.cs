@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class CentralTree : MonoBehaviour, IInteractable
 {
     public Sprite restoredSprite;
-
+    public GameStateManager gameState;
     public SetSelfInactive costElement;
     public GameCommand essenceResource;
     public float decreaseValue;
@@ -29,21 +29,26 @@ public class CentralTree : MonoBehaviour, IInteractable
 
     public void Interact(GameObject actor)
     {
-        if (essenceResource.DecreaseValueUntilZero(decreaseValue))
-        {
-            winGame.Invoke();
-            spriteRenderer.sprite = restoredSprite;
-        }
-        else
-        {
-            //tell not enough resource
+        if (gameState.checkWin()) {
+            if (essenceResource.DecreaseValueUntilZero(decreaseValue))
+            {
+                winGame.Invoke();
+                spriteRenderer.sprite = restoredSprite;
+            }
+            else
+            {
+                //tell not enough resource
+            }
         }
     }
 
     public void onHighlight()
     {
-        costElement.gameObject.SetActive(true);
-        costElement.display();
+        if (gameState.checkWin())
+        {
+            costElement.gameObject.SetActive(true);
+            costElement.display();
+        }
     }
 
 }

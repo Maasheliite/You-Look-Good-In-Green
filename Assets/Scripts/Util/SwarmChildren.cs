@@ -54,6 +54,13 @@ public class SwarmChildren : MonoBehaviour
             directions[i] = (directions[i] + Random.insideUnitCircle * wiggleSpeed).normalized;
             float step = speed * Time.deltaTime;
             children[i].position = Vector3.MoveTowards(children[i].position, children[i].position + new Vector3(directions[i].x, directions[i].y, 0), step);
+            if(directions[i].x > 0.2)
+            {
+                children[i].localScale = new Vector3(-1,1,1);
+            }else
+            {
+                children[i].localScale = new Vector3(1, 1, 1);
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 384241201369121385}
   - component: {fileID: 8437964046464796140}
   - component: {fileID: 4377341824257393286}
+  - component: {fileID: -9142958790535646286}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -101,3 +102,19 @@ MonoBehaviour:
   deathTimerMax: 1
   itemCommand: {fileID: 11400000, guid: 2dc5ac7537e0cf64a9a0f88caeee7b82, type: 2}
   increaseValue: 1
+--- !u!58 &-9142958790535646286
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2908433453239412807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09}
+  serializedVersion: 2
+  m_Radius: 0.45393866
