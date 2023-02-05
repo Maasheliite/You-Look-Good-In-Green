@@ -36,6 +36,7 @@ public class Actor : MonoBehaviour
         }
         else
         {
+            closestInteractable.onHighlight();
             highlight.SetActive(true);
             highlight.transform.SetParent(closestInteractable.getGameObject().transform, false);
         }

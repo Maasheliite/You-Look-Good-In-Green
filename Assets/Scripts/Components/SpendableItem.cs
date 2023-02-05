@@ -25,6 +25,8 @@ public class SpendableItem : MonoBehaviour, IInteractable
         }
     }
 
-
-
+    public void onHighlight()
+    {
+        //show cost;
+    }
 }

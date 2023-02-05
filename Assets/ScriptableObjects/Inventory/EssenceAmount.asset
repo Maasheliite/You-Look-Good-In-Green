@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2388548f88646c54da010a2f2c4284ec, type: 3}
   m_Name: EssenceAmount
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 39

@@ -18,8 +18,9 @@ public class Root : MonoBehaviour, IInteractable
 {
     [field: SerializeField]
     public KeyCode interactButton { get; set; } = KeyCode.None;
-    public Slider slider;
+    private Slider slider;
     public GameObject dangerPrefab;
+    public SetSelfInactive costElement;
     private GameObject dangerInstance;
     public UnityEvent loseObjectiveEvent;
     public UnityEvent completeObjectiveEvent;
@@ -125,5 +126,9 @@ public class Root : MonoBehaviour, IInteractable
         }
     }
 
-    
+    public void onHighlight()
+    {
+        costElement.gameObject.SetActive(true);
+        costElement.display();
+    }
 }

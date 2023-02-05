@@ -51,6 +51,9 @@ public class AquireableItem : MonoBehaviour, IInteractable
             interactable = false;
         }
     }
-    
 
+    public void onHighlight()
+    {
+       //nothing
+    }
 }

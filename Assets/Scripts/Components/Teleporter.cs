@@ -22,4 +22,9 @@ public class Teleporter : MonoBehaviour, IInteractable
        Vector3 distance = gameObject.transform.position - target.transform.position;
         actor.transform.position = actor.transform.position - distance;
     }
+
+    public void onHighlight()
+    {
+        //nothing
+    }
 }
