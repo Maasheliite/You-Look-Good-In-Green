@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63997df87e64cdb408717a1546c31ac4, type: 3}
   m_Name: modifyWaterAmount
   m_EditorClassIdentifier: 
-  variableToModify: {fileID: 0}
+  variableToModify: {fileID: 11400000, guid: 82625ec9ac87e8b45bbf3abd0f47b4da, type: 2}
