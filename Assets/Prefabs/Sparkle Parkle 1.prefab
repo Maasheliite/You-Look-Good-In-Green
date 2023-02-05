@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 686817273057835421}
   - component: {fileID: 686817273057835418}
   - component: {fileID: 4015037373781140895}
+  - component: {fileID: -2520166004710831351}
   m_Layer: 0
   m_Name: Sparkle Parkle 1
   m_TagString: Untagged
@@ -62,9 +63,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b12dd3120660e241a838006bb68349c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <interactButton>k__BackingField: 0
+  <interactButton>k__BackingField: 32
+  deathTimerMax: 0.75
   itemCommand: {fileID: 11400000, guid: 9eb39c46f9c5245449481ad9b3c8b1df, type: 2}
   increaseValue: 1
+--- !u!58 &-2520166004710831351
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686817273057835419}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &8145411303345041262
 PrefabInstance:
   m_ObjectHideFlags: 0

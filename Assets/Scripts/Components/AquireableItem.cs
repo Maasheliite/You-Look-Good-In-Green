@@ -8,10 +8,10 @@ public class AquireableItem : MonoBehaviour, IInteractable
 
     [field: SerializeField]
     public KeyCode interactButton { get; set; } = KeyCode.None;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderers;
     private bool interactable = true;
     private float timer = 0;
-    public float deathTimerMax = 1f;
+    public float deathTimerMax = 100f;
     public GameCommand itemCommand;
     public float increaseValue;
     public GameObject getGameObject()
@@ -20,7 +20,11 @@ public class AquireableItem : MonoBehaviour, IInteractable
     }
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderers = GetComponents<SpriteRenderer>();
+        if (spriteRenderers == null || spriteRenderers.Length == 0)
+        {
+            spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        }
     }
     private void Update()
     {
@@ -31,7 +35,12 @@ public class AquireableItem : MonoBehaviour, IInteractable
         else if (!interactable)
         {
             timer += Time.deltaTime;
-            spriteRenderer.color = new Color(255, 255, 255, Mathf.Lerp(255, 0, timer/ deathTimerMax));
+            float val = Mathf.Lerp(1, 0, timer / deathTimerMax);
+            foreach (var renderer in spriteRenderers)
+            {
+                renderer.material.color = new Color(1, 1, 1, val);
+                renderer.color = new Color(1, 1, 1, val);
+            }
         }
     }
     public void Interact(GameObject actor)

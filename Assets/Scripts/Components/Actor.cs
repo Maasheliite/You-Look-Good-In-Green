@@ -51,7 +51,6 @@ public class Actor : MonoBehaviour
             IInteractable interactable = collider.GetComponent<IInteractable>();
             if (interactable != null)
             {
-                Debug.Log(interactable);
                 float distance = Vector2.Distance(transform.position, collider.transform.position);
                 interactables[interactable] = distance;
             }
