@@ -9,6 +9,10 @@ namespace Nizu.Util.ScriptableObjects
     {
         public FloatVariable variableToModify;
 
+        public void SetValue(float val)
+        {
+            variableToModify.Value = val;
+        }
 
         public void IncreaseValue(float val)
         {
@@ -17,6 +21,18 @@ namespace Nizu.Util.ScriptableObjects
         public void DecreaseValue(float val)
         {
             variableToModify.Value -= val;
+        }
+        public bool DecreaseValueUntilZero(float val)
+        {
+            if (variableToModify.Value - val < 0) {
+                return false; 
+            }
+            else
+            {
+                variableToModify.Value -= val;
+                return true;
+            }
+
         }
         public void MultiplyValue(float val)
         {
