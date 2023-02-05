@@ -76,7 +76,7 @@ public class Root : MonoBehaviour, IInteractable
         dangerInstance = Instantiate(dangerPrefab);
         state = RootState.DANGER;
         loseObjectiveEvent.Invoke();
-        slider.enabled = true;
+        slider.gameObject.SetActive(true);
         timer = attackDuration.Value;
         slider.maxValue = timer;
         spriteRenderer.color = new Color(255,127,0);
@@ -85,14 +85,14 @@ public class Root : MonoBehaviour, IInteractable
     {
         state = RootState.HEALTHY;
         completeObjectiveEvent.Invoke();
-        slider.enabled = false;
+        slider.gameObject.SetActive(false);
         timer = attackIntervalTimeMinimum.Value + Random.Range(0,attackIntervalTimeMax.Value);
         spriteRenderer.color = Color.white;
     }
     public void SetDamaged()
     {
         state = RootState.DAMAGED;
-        slider.enabled = false;
+        slider.gameObject.SetActive(false);
         spriteRenderer.color = Color.red;
     }
 
