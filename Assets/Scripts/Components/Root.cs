@@ -33,6 +33,8 @@ public class Root : MonoBehaviour, IInteractable
     public float essenceCost;
     private float timer;
 
+    public GameStateManager gameState;
+
 
     private SpriteRenderer spriteRenderer;
 
@@ -52,6 +54,7 @@ public class Root : MonoBehaviour, IInteractable
         else if (state == RootState.DANGER)
         {
             SetDamaged();
+            gameState.loseObjective();
         }else if(state == RootState.HEALTHY)
         {
             SetDanger();
@@ -60,6 +63,8 @@ public class Root : MonoBehaviour, IInteractable
         if (state == RootState.DANGER && dangerInstance == null)
         {
             SetHealthy();
+            gameState.completeObjective();
+
         }
 
     }
