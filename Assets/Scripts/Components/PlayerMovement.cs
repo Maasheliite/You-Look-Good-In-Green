@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 dist;
 
 
-
     public static bool notClimbing;
 
     private void Start()
@@ -132,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Attack()
     {
+
         GameObject b = Instantiate(AttackObject);
         b.transform.position = AttackLocation.transform.position;
 
