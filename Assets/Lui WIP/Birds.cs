@@ -17,7 +17,7 @@ public class Birds : MonoBehaviour, IInteractable
     public Sprite built;
 
 
-
+    private bool builtBool = false;
 
 
     public GameObject getGameObject()
@@ -35,8 +35,10 @@ public class Birds : MonoBehaviour, IInteractable
 
     public void onHighlight()
     {
-
-        costElement.gameObject.SetActive(true);
+        if (!builtBool)
+        {
+            costElement.gameObject.SetActive(true);
+        }
 
     }
         // Start is called before the first frame update
