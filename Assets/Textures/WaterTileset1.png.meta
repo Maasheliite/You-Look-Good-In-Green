@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -108,19 +120,19 @@ TextureImporter:
       name: WaterTileset1_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
-        width: 16
-        height: 16
+        x: 0
+        y: 36
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b205504544204c0459f0547ad9c04ece
-      internalID: -1492462033
+      spriteID: 2ec212957fc61cc45a51b23bb1daec02
+      internalID: 676583047
       vertices: []
       indices: 
       edges: []
@@ -129,19 +141,19 @@ TextureImporter:
       name: WaterTileset1_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 16
-        height: 16
+        x: 18
+        y: 36
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58830de72b6275f4aa3c595ee1c17c77
-      internalID: 1037130951
+      spriteID: 791658e1e934fd047b0efacd0bb8b0aa
+      internalID: -2017370370
       vertices: []
       indices: 
       edges: []
@@ -150,19 +162,19 @@ TextureImporter:
       name: WaterTileset1_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
-        width: 16
-        height: 16
+        x: 36
+        y: 36
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f311d76a4bfb3664f9b99135334671b6
-      internalID: -1045667513
+      spriteID: 3ec07c88e8eb5054999834178bd70a3f
+      internalID: -839576252
       vertices: []
       indices: 
       edges: []
@@ -171,19 +183,19 @@ TextureImporter:
       name: WaterTileset1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
+        x: 54
+        y: 36
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32217ebf356fe3243b42e83a49f6a5d8
-      internalID: -696397985
+      spriteID: 762750bf93121e6438f7bf8f24c9ce07
+      internalID: 401424519
       vertices: []
       indices: 
       edges: []
@@ -192,19 +204,19 @@ TextureImporter:
       name: WaterTileset1_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 72
+        y: 36
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44838edca35a62e40b1021aa9f56ee20
-      internalID: 1519120503
+      spriteID: 46faee523c9af784f892ae1356b13e4e
+      internalID: 1655219697
       vertices: []
       indices: 
       edges: []
@@ -213,19 +225,19 @@ TextureImporter:
       name: WaterTileset1_5
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
+        x: 0
+        y: 18
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21c44e30494d7b2429d8cde1773c102f
-      internalID: 56497683
+      spriteID: 69731b1218d27a04baa228e3728f1dcd
+      internalID: -107810433
       vertices: []
       indices: 
       edges: []
@@ -234,19 +246,19 @@ TextureImporter:
       name: WaterTileset1_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
-        width: 16
-        height: 16
+        x: 18
+        y: 18
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed67786a0a780374e8512d22978d28f2
-      internalID: 757689817
+      spriteID: 100b18bd7f4579f4bb4c953155d27f54
+      internalID: 526142240
       vertices: []
       indices: 
       edges: []
@@ -255,19 +267,19 @@ TextureImporter:
       name: WaterTileset1_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
+        x: 36
+        y: 18
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbf8206450e11a849a505bb45b46a330
-      internalID: 1932694558
+      spriteID: a059222cc9ed497469b8c1f6a6368241
+      internalID: -1814443846
       vertices: []
       indices: 
       edges: []
@@ -276,19 +288,19 @@ TextureImporter:
       name: WaterTileset1_8
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
+        x: 54
+        y: 18
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da402bb8bb00ce945b8012cb7e953286
-      internalID: -1187584108
+      spriteID: 8723b1ba3bac5bc4e90c7f3a071cf872
+      internalID: -133610483
       vertices: []
       indices: 
       edges: []
@@ -297,19 +309,19 @@ TextureImporter:
       name: WaterTileset1_9
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 16
-        height: 16
+        x: 0
+        y: 0
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4862edd53d968814baed5f69003359a9
-      internalID: -1235962928
+      spriteID: b9a08c0be2208df418ba690521e1dfba
+      internalID: -238118498
       vertices: []
       indices: 
       edges: []
@@ -318,19 +330,19 @@ TextureImporter:
       name: WaterTileset1_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 18
+        y: 0
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bad24a5fe591cc44688cb83ad2a7ef70
-      internalID: 1023092178
+      spriteID: d08b0683e44bc774384f9dea9e4e4ab8
+      internalID: 1149122865
       vertices: []
       indices: 
       edges: []
@@ -339,19 +351,19 @@ TextureImporter:
       name: WaterTileset1_11
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 36
+        y: 0
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38ac6fe8d7c28f94b9b703432ab8994d
-      internalID: -2054357161
+      spriteID: 7a366af56f163ba40b91f28730c0cf1c
+      internalID: -1449434554
       vertices: []
       indices: 
       edges: []
@@ -360,19 +372,19 @@ TextureImporter:
       name: WaterTileset1_12
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
+        x: 54
+        y: 0
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cd7e5642f24f14a8017020940aa9e2
-      internalID: -1808317866
+      spriteID: 5b6f391ceecd70b4d9841d074080d3a3
+      internalID: 1712795762
       vertices: []
       indices: 
       edges: []
@@ -381,82 +393,19 @@ TextureImporter:
       name: WaterTileset1_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e65403d914acdd24ab9a2b15d4439740
-      internalID: -1502572720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterTileset1_14
-      rect:
-        serializedVersion: 2
-        x: 16
+        x: 72
         y: 0
-        width: 16
-        height: 16
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b94ec1cc2e569334482027bbfee03c3c
-      internalID: 1312542102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterTileset1_15
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec0df200485fbe14dbf98bb4942ad4c9
-      internalID: 1241997122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterTileset1_16
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98eebc2368ff7be4991c06c2d01cee2a
-      internalID: 1701929467
+      spriteID: 1c3e7e4af801d8b489843d1e73f802af
+      internalID: 1861989229
       vertices: []
       indices: 
       edges: []
@@ -472,23 +421,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterTileset1_9: -1235962928
-      WaterTileset1_5: 56497683
-      WaterTileset1_12: -1808317866
-      WaterTileset1_7: 1932694558
-      WaterTileset1_13: -1502572720
-      WaterTileset1_6: 757689817
-      WaterTileset1_16: 1701929467
-      WaterTileset1_4: 1519120503
-      WaterTileset1_14: 1312542102
-      WaterTileset1_0: -1492462033
-      WaterTileset1_1: 1037130951
-      WaterTileset1_2: -1045667513
-      WaterTileset1_11: -2054357161
-      WaterTileset1_3: -696397985
-      WaterTileset1_10: 1023092178
-      WaterTileset1_8: -1187584108
-      WaterTileset1_15: 1241997122
+      WaterTileset1_9: -238118498
+      WaterTileset1_5: -107810433
+      WaterTileset1_12: 1712795762
+      WaterTileset1_7: -1814443846
+      WaterTileset1_13: 1861989229
+      WaterTileset1_6: 526142240
+      WaterTileset1_4: 1655219697
+      WaterTileset1_0: 676583047
+      WaterTileset1_1: -2017370370
+      WaterTileset1_2: -839576252
+      WaterTileset1_11: -1449434554
+      WaterTileset1_3: 401424519
+      WaterTileset1_10: 1149122865
+      WaterTileset1_8: -133610483
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
