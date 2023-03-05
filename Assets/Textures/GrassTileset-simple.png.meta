@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c0af6c9d00265aa4dbb205f5ef99a401
+guid: c94af0133786ea047b4cff57d3623b59
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -102,7 +102,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,206 +113,278 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: foliage_tiles_0
+      name: GrassTileset-simple_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 16
-        height: 16
+        y: 72
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7ea88fe7d19048409c7555fc3d0a8ca
-      internalID: 1636843730
+      spriteID: 3b29effc6cc5d444b82f449d105662b2
+      internalID: -1391491809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foliage_tiles_1
+      name: GrassTileset-simple_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
+        x: 18
+        y: 72
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48df18b475985334ab477fc8ca865dab
-      internalID: 849544629
+      spriteID: 2a1ee22a07b0aa54b8606323f596689a
+      internalID: 1924795754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foliage_tiles_2
+      name: GrassTileset-simple_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
+        x: 36
+        y: 72
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a44848045316a545b702d5bb65b63e5
-      internalID: 1447873631
+      spriteID: 6b695f0c655a3834885bd4969d19d21b
+      internalID: 2014354713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foliage_tiles_3
+      name: GrassTileset-simple_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
+        y: 54
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faab6d5744c35e043aafacd17616790d
-      internalID: 1774112927
+      spriteID: f3fd1bfe696f1e449a51fe698dfd31fe
+      internalID: -2127733776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foliage_tiles_4
+      name: GrassTileset-simple_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
+        x: 18
+        y: 54
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beb6e4d02a9b89f4d8ec05b285b20718
-      internalID: 303852364
+      spriteID: ef91282e7f1c9e54a9018575d2813e04
+      internalID: 417334710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foliage_tiles_5
+      name: GrassTileset-simple_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
+        x: 36
+        y: 54
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e6f62010a4435f4b8eebb4ba71de0ef
-      internalID: -1752979384
+      spriteID: c9130edf40a427244bba572e2cab0f04
+      internalID: 997796494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: foliage_tiles_6
+      name: GrassTileset-simple_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f5686c236a045449bef3668d67ef3a
+      internalID: -1313219470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassTileset-simple_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 36
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e0c7f76701c9c4187316936eaf52b9
+      internalID: -189371649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassTileset-simple_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edac5d8ab5c3c34e9bf5ae3f1b764ee
+      internalID: -498500632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassTileset-simple_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a720abac7ca7e448a8504a6d63c8a2
+      internalID: -1523083414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassTileset-simple_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 18
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c50c3e4e5ac874e87550d57585c2d1
+      internalID: 1762912610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassTileset-simple_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 18
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1284d92c13fa0f41a2333218bef1719
+      internalID: -284696091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassTileset-simple_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: febff465b70bfc941919b36fd1c644a1
-      internalID: 1969621192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foliage_tiles_7
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68baef5dd888f734eab858688aa12cf2
-      internalID: 2127142301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: foliage_tiles_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0be75c99e6a3ef4eb6b23d59b1d7852
-      internalID: 1336498645
+      spriteID: dcfabd2d6cf7efa438f6954acb45f7a8
+      internalID: -688575396
       vertices: []
       indices: 
       edges: []
@@ -328,15 +400,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      foliage_tiles_4: 303852364
-      foliage_tiles_8: 1336498645
-      foliage_tiles_3: 1774112927
-      foliage_tiles_6: 1969621192
-      foliage_tiles_2: 1447873631
-      foliage_tiles_1: 849544629
-      foliage_tiles_7: 2127142301
-      foliage_tiles_0: 1636843730
-      foliage_tiles_5: -1752979384
+      GrassTileset-simple_12: -688575396
+      GrassTileset-simple_0: -1391491809
+      GrassTileset-simple_3: -2127733776
+      GrassTileset-simple_10: 1762912610
+      GrassTileset-simple_8: -498500632
+      GrassTileset-simple_2: 2014354713
+      GrassTileset-simple_6: -1313219470
+      GrassTileset-simple_1: 1924795754
+      GrassTileset-simple_9: -1523083414
+      GrassTileset-simple_4: 417334710
+      GrassTileset-simple_11: -284696091
+      GrassTileset-simple_5: 997796494
+      GrassTileset-simple_7: -189371649
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
