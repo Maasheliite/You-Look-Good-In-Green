@@ -45,12 +45,10 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 2c2fa21b9d1baa2449b9acf4d4eeba46, type: 3}
-    - {fileID: 2800000, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
+    - {fileID: 2800000, guid: ea99a5181f4e01d4ebadb1589b3e9c0f, type: 3}
     - {fileID: 2800000, guid: c94af0133786ea047b4cff57d3623b59, type: 3}
     - {fileID: 2800000, guid: ca0558c097f6c294eb966776c21f20e2, type: 3}
     - {fileID: 2800000, guid: 67bfba22630c9c646bc3cb948d6647ec, type: 3}
-    - {fileID: 2800000, guid: ea99a5181f4e01d4ebadb1589b3e9c0f, type: 3}
-    - {fileID: 2800000, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -117,15 +115,6 @@ SpriteAtlas:
   - {fileID: -1313219470, guid: c94af0133786ea047b4cff57d3623b59, type: 3}
   - {fileID: -1523083414, guid: c94af0133786ea047b4cff57d3623b59, type: 3}
   - {fileID: -498500632, guid: c94af0133786ea047b4cff57d3623b59, type: 3}
-  - {fileID: 1240457778, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 1513582809, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 418346249, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 1536008210, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 1966304020, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 824576271, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 165784498, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: -1587938545, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
-  - {fileID: 88336253, guid: 9862c1d69f14271439f16e902f988b41, type: 3}
   - {fileID: -1029670248, guid: ea99a5181f4e01d4ebadb1589b3e9c0f, type: 3}
   - {fileID: -148063862, guid: ea99a5181f4e01d4ebadb1589b3e9c0f, type: 3}
   - {fileID: -1289384822, guid: ea99a5181f4e01d4ebadb1589b3e9c0f, type: 3}
@@ -193,15 +182,6 @@ SpriteAtlas:
   - {fileID: -1681879069, guid: 2c2fa21b9d1baa2449b9acf4d4eeba46, type: 3}
   - {fileID: 1303223533, guid: 2c2fa21b9d1baa2449b9acf4d4eeba46, type: 3}
   - {fileID: -288826469, guid: 2c2fa21b9d1baa2449b9acf4d4eeba46, type: 3}
-  - {fileID: 1774112927, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 1447873631, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 849544629, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 1636843730, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 2127142301, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 1969621192, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: -1752979384, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 303852364, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
-  - {fileID: 1336498645, guid: c0af6c9d00265aa4dbb205f5ef99a401, type: 3}
   m_PackedSpriteNamesToIndex:
   - GrassTileset_14
   - GrassTileset_22
@@ -264,15 +244,6 @@ SpriteAtlas:
   - GrassTileset-simple_6
   - GrassTileset-simple_9
   - GrassTileset-simple_8
-  - individual_flowers_particle_5
-  - individual_flowers_particle_4
-  - individual_flowers_particle_7
-  - individual_flowers_particle_6
-  - individual_flowers_particle_1
-  - individual_flowers_particle_0
-  - individual_flowers_particle_3
-  - individual_flowers_particle_2
-  - individual_flowers_particle_8
   - WaterTileset2_12
   - WaterTileset2_13
   - WaterTileset2_10
@@ -340,15 +311,6 @@ SpriteAtlas:
   - FlowerCarpetTileset_9
   - FlowerCarpetTileset_51
   - FlowerCarpetTileset_50
-  - foliage_tiles_3
-  - foliage_tiles_2
-  - foliage_tiles_1
-  - foliage_tiles_0
-  - foliage_tiles_7
-  - foliage_tiles_6
-  - foliage_tiles_5
-  - foliage_tiles_4
-  - foliage_tiles_8
   m_RenderDataMap: {}
   m_Tag: TileSpriteAtlas
   m_IsVariant: 0
