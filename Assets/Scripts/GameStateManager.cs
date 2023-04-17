@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+    public enum GameState
+    {
+        MainMenu,
+        Running,
+        Paused,
+        AnimationPlay,
+
+    }
+    public static GameState gameState = GameState.Running;
+
+
     private float completedObjectives;
     public void completeObjective()
     {

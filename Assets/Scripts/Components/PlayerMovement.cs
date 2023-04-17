@@ -37,64 +37,68 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        if (!isAttacking)
+        if (GameStateManager.gameState == GameStateManager.GameState.Running)
         {
-            animator.SetFloat("Horizontal", direction.x);
-            animator.SetFloat("Vertical", direction.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
 
-        }
-
-        else if (isAttacking)
-        {
-            animator.SetFloat("Horizontal", direction.x);
-            animator.SetFloat("Vertical", direction.y);
-            animator.SetFloat("Speed", 0);
-        }
-
-
-
-        if (movement.x < 0)
-        {
-            gameObject.transform.localRotation = Quaternion.Euler(0, 180, 0);
-            direction.x = -1;
-            direction.y = 0;
-        }
-        if (movement.x > 0)
-        {
-            gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
-
-            direction.x = 1;
-            direction.y = 0;
-        }
-        if (movement.y > 0)
-        {
-            direction.y = 1;
-            direction.x = 0;
-        }
-        if (movement.y < 0)
-        {
-            direction.y = -1;
-            direction.x = 0;
-        }
-        if (!stopFighting)
-        {
-            if (Input.GetButtonDown("Fire1"))
+            if (!isAttacking)
             {
-                if (isAttacking) return;
+                animator.SetFloat("Horizontal", direction.x);
+                animator.SetFloat("Vertical", direction.y);
+                animator.SetFloat("Speed", movement.sqrMagnitude);
 
-                animator.SetBool("isAttacking", true);
-
-                isAttacking = true;
-                Invoke("Attack", .6f);
-                Invoke("ResetAttack", attackDelay);
             }
+
+            else if (isAttacking)
+            {
+                animator.SetFloat("Horizontal", direction.x);
+                animator.SetFloat("Vertical", direction.y);
+                animator.SetFloat("Speed", 0);
+            }
+
+
+
+            if (movement.x < 0)
+            {
+                gameObject.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                direction.x = -1;
+                direction.y = 0;
+            }
+            if (movement.x > 0)
+            {
+                gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+                direction.x = 1;
+                direction.y = 0;
+            }
+            if (movement.y > 0)
+            {
+                direction.y = 1;
+                direction.x = 0;
+            }
+            if (movement.y < 0)
+            {
+                direction.y = -1;
+                direction.x = 0;
+            }
+            if (!stopFighting)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    if (isAttacking) return;
+
+                    animator.SetBool("isAttacking", true);
+
+                    isAttacking = true;
+                    Invoke("Attack", .6f);
+                    Invoke("ResetAttack", attackDelay);
+                }
+            }
+
+
+
         }
-
-
 
     }
 
