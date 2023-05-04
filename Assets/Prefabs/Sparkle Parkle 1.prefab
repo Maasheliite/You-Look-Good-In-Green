@@ -90,10 +90,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 686817273057835421}
     m_Modifications:
-    - target: {fileID: 5764247413177718614, guid: 87acfeba7ec1f4146b8f9168935b4930, type: 3}
-      propertyPath: m_Intensity
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 8683574255178914380, guid: 87acfeba7ec1f4146b8f9168935b4930, type: 3}
       propertyPath: m_RootOrder
       value: 0
