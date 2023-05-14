@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Horizontal", direction.x);
                 animator.SetFloat("Vertical", direction.y);
                 animator.SetFloat("Speed", movement.sqrMagnitude);
-
             }
 
             else if (isAttacking)

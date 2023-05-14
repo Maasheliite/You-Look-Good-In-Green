@@ -83,7 +83,7 @@ public class SlimeAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (timer < Time.time && idletime == true)
+        if (timer < Time.time && idletime == true && GameStateManager.gameState == GameStateManager.GameState.Running)
         {
             MoveCharacter(movement);
 
