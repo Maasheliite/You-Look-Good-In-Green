@@ -81,18 +81,16 @@ public class PlayerMovement : MonoBehaviour
                 direction.y = -1;
                 direction.x = 0;
             }
-            if (!stopFighting)
+            if (Input.GetButtonDown("Fire1"))
             {
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    if (isAttacking) return;
+                if (isAttacking) return;
 
-                    animator.SetBool("isAttacking", true);
+                animator.SetBool("isAttacking", true);
 
-                    isAttacking = true;
-                    Invoke("Attack", .6f);
-                    Invoke("ResetAttack", attackDelay);
-                }
+                isAttacking = true;
+                Invoke("Attack", .6f);
+                Invoke("ResetAttack", attackDelay);
+                
             }
 
 
@@ -142,15 +140,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void StopFighting()
-    {
-        stopFighting = true;
-    }
-
-    public void StartFighting()
-    {
-        stopFighting = false;
-    }
 
 
     public void TakeDamage(int damage)

@@ -9,7 +9,7 @@ public class GameStateManager : MonoBehaviour
         MainMenu,
         Running,
         Paused,
-        AnimationPlay,
+        AnimationPlay
 
     }
     public static GameState gameState = GameState.Running;
