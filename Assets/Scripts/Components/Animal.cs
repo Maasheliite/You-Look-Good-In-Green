@@ -23,11 +23,12 @@ public class Animal : MonoBehaviour, IInteractable
 
     enum QuestState
     {
+        None,
         Start,
         Finish
     }
 
-    QuestState questState;
+    QuestState questState = QuestState.None;
     [field: SerializeField] AnimalList AnimalFromList;
 
 

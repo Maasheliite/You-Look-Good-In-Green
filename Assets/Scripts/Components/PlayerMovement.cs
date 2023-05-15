@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject AttackObject;
     public Transform AttackLocation;
-    private bool stopFighting;
 
     public float moveSpeed = 5f;
 
