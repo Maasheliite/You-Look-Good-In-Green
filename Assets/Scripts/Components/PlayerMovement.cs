@@ -37,15 +37,21 @@ public class PlayerMovement : MonoBehaviour
     public static bool CanUnbush = false;
     public static bool CanTeleport = false;
     public static bool CanShoot = false;
+    public static bool CanMudPool = false;
 
 
     private int MaxHealth = 20;
     private int Health = 20;
     private float HealTimer = 0f;
 
+    //shooting variables
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
     public float projectileSpeed = 10f;
+
+    //mud pool variables
+    public GameObject mudPoolPrefab;
+    public float mudPoolRange = 5f;
 
 
     private void Start()
@@ -115,6 +121,14 @@ public class PlayerMovement : MonoBehaviour
                 isAttacking = true;
                 Invoke("LeafAttack", .6f);
                 Invoke("ResetAttack", attackDelay);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if (CanMudPool)
+                {
+                    SpawnMudPool();
+                }
             }
 
 
@@ -195,6 +209,15 @@ public class PlayerMovement : MonoBehaviour
 
         Destroy(projectile, 1.5f);
     }
+
+    private void SpawnMudPool()
+    {
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 spawnPosition = transform.position + (mousePosition - transform.position).normalized * mudPoolRange;
+
+        Instantiate(mudPoolPrefab, spawnPosition, Quaternion.identity);
+    }
+
     private void Dash()
     {
         animator.Play("Dash");
@@ -280,5 +303,10 @@ public class PlayerMovement : MonoBehaviour
     public void ActivateShoot()
     {
         CanShoot = true;
+    }
+
+    public void ActivateMud()
+    {
+        CanMudPool = true;
     }
 }
