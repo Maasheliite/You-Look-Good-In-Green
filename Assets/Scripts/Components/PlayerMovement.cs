@@ -42,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
     private int Health = 20;
     private float HealTimer = 0f;
 
+    public GameObject projectilePrefab;
+    public Transform projectileSpawnPoint;
+    public float projectileSpeed = 10f;
+
 
     private void Start()
     {
@@ -91,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
                 direction.y = -1;
                 direction.x = 0;
             }
-            if (Input.GetButtonDown("Fire1") && CanSlam)
+            if (Input.GetButtonDown("Fire2") && CanSlam)
             {
                 if (isAttacking) return;
 
@@ -101,8 +105,17 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("Attack", .6f);
                 Invoke("ResetAttack", attackDelay);
             }
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (isAttacking) return;
 
-            
+                animator.SetBool("isLeafAttacking", true);
+
+                isAttacking = true;
+                Invoke("LeafAttack", .6f);
+                Invoke("ResetAttack", attackDelay);
+            }
+
 
             if (!isDashing)
             {
@@ -160,6 +173,8 @@ public class PlayerMovement : MonoBehaviour
     private void ResetAttack()
     {
         animator.SetBool("isAttacking", false);
+        animator.SetBool("isLeafAttacking", false);
+
         isAttacking = false;
     }
 
@@ -169,7 +184,16 @@ public class PlayerMovement : MonoBehaviour
         b.transform.position = AttackLocation.transform.position;
         Destroy(b, 1.5f);
     }
+    private void LeafAttack()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
+        projectile.transform.right = direction;
 
+        Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
+        projectileRb.velocity = projectile.transform.right * projectileSpeed; // Adjust projectileSpeed as needed
+
+        Destroy(projectile, 1.5f);
+    }
     private void Dash()
     {
         animator.Play("Dash");
@@ -221,6 +245,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("heal");
 
     }
+
+    
 
     public void TakeDamage(int damage)
     {
