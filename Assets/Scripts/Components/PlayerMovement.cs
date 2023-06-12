@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool CanSlam = false;
     public static bool CanUnbush = false;
     public static bool CanTeleport = false;
+    public static bool CanShoot = false;
 
 
     private int MaxHealth = 20;
@@ -105,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("Attack", .6f);
                 Invoke("ResetAttack", attackDelay);
             }
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && CanShoot)
             {
                 if (isAttacking) return;
 
@@ -275,5 +276,9 @@ public class PlayerMovement : MonoBehaviour
     public void ActivateTeleport()
     {
         CanTeleport = true;
+    }
+    public void ActivateShoot()
+    {
+        CanShoot = true;
     }
 }
