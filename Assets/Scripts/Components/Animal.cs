@@ -77,6 +77,7 @@ public class Animal : MonoBehaviour, IInteractable
             if (IsMissionFinished(AnimalFromList))
             {
                 questState = QuestState.Finish;
+                PlayerMovement.SkillPoints++;
             }
             else
             {

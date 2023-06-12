@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     public static bool CanShoot = false;
     public static bool CanMudPool = false;
 
+    public static int SkillPoints = 10;
+
 
     private int MaxHealth = 20;
     private int Health = 20;
@@ -53,6 +56,14 @@ public class PlayerMovement : MonoBehaviour
     public GameObject mudPoolPrefab;
     public float mudPoolRange = 5f;
 
+
+    //All Buttons
+    public Button UnbushButton;
+    public Button ShootButton;
+    public Button DashButton;
+    public Button TeleportButton;
+    public Button SlamButton;
+    public Button MudPoolButton;
 
     private void Start()
     {
@@ -279,34 +290,68 @@ public class PlayerMovement : MonoBehaviour
 
     public void ActivateDash()
     {
-        CanDash = true;
+        if (SkillPoints > 0)
+        {
+            CanDash = true;
+            SkillPoints--;
+        }
     }
 
     public void ActivateHeal()
     {
-        CanHeal = true;
+        if (SkillPoints > 0)
+        {
+            CanHeal = true;
+            SkillPoints--;
+            UnbushButton.interactable = true;
+            ShootButton.interactable = true;
+        }
     }
 
     public void ActivateSlam()
     {
-        CanSlam = true;
+        if (SkillPoints > 0)
+        {
+            CanSlam = true;
+            SkillPoints--;
+        }
     }
 
     public void ActivateUnbush()
     {
-        CanUnbush = true;
+        if (SkillPoints > 0)
+        {
+            CanUnbush = true;
+            SkillPoints--;
+            DashButton.interactable = true;
+            TeleportButton.interactable = true;
+        }
     }
     public void ActivateTeleport()
     {
-        CanTeleport = true;
+        if (SkillPoints > 0)
+        {
+            CanTeleport = true;
+            SkillPoints--;
+        }
     }
     public void ActivateShoot()
     {
-        CanShoot = true;
+        if (SkillPoints > 0)
+        {
+            CanShoot = true;
+            SkillPoints--;
+            SlamButton.interactable = true;
+            MudPoolButton.interactable = true;
+        }
     }
 
     public void ActivateMud()
     {
-        CanMudPool = true;
+        if (SkillPoints > 0)
+        {
+            CanMudPool = true;
+            SkillPoints--;
+        }
     }
 }
