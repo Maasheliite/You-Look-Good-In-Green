@@ -31,8 +31,13 @@ public class PlayerMovement : MonoBehaviour
     private float dashTimer = 0f;
     private float dashCooldownTimer = 0f;
 
-
     private bool CanDash = false;
+    private bool CanHeal = false;
+
+    private int MaxHealth = 20;
+    private int Health = 20;
+    private float HealTimer = 0f;
+
 
     private void Start()
     {
@@ -93,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("ResetAttack", attackDelay);
             }
 
+            
+
             if (!isDashing)
             {
                 dashCooldownTimer -= Time.deltaTime;
@@ -101,6 +108,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Dash();
                 }
+            }
+            if (Input.GetKeyDown(KeyCode.H) && HealTimer<=Time.time && CanHeal == true)
+            {
+                PerformHeal();
             }
         }
     }
@@ -199,17 +210,26 @@ public class PlayerMovement : MonoBehaviour
         return Mathf.SmoothStep(0f, 1f, t);
     }
 
-    public void TakeDamage(int damage)
+    private void PerformHeal()
     {
-        return;
+        Health = MaxHealth;
+        HealTimer = Time.time + 20f;
+        Debug.Log("heal");
+
     }
 
+    public void TakeDamage(int damage)
+    {
+        Health--;
+    }
 
     public void ActivateDash()
     {
         CanDash = true;
     }
 
-
-
+    public void ActivateHeal()
+    {
+        CanHeal = true;
+    }
 }
