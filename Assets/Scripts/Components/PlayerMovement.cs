@@ -31,8 +31,12 @@ public class PlayerMovement : MonoBehaviour
     private float dashTimer = 0f;
     private float dashCooldownTimer = 0f;
 
-    private bool CanDash = false;
-    private bool CanHeal = false;
+    public static bool CanDash = false;
+    public static bool CanHeal = false;
+    public static bool CanSlam = false;
+    public static bool CanUnbush = false;
+    public static bool CanTeleport = false;
+
 
     private int MaxHealth = 20;
     private int Health = 20;
@@ -87,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
                 direction.y = -1;
                 direction.x = 0;
             }
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && CanSlam)
             {
                 if (isAttacking) return;
 
@@ -231,5 +235,19 @@ public class PlayerMovement : MonoBehaviour
     public void ActivateHeal()
     {
         CanHeal = true;
+    }
+
+    public void ActivateSlam()
+    {
+        CanSlam = true;
+    }
+
+    public void ActivateUnbush()
+    {
+        CanUnbush = true;
+    }
+    public void ActivateTeleport()
+    {
+        CanTeleport = true;
     }
 }
