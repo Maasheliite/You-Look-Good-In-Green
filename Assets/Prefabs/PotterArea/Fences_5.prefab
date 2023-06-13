@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8960709325629160870}
   - component: {fileID: 1071289462315735144}
   - component: {fileID: 2751633113740951570}
+  - component: {fileID: 1162777370590648243}
   m_Layer: 0
   m_Name: Fences_5
   m_TagString: Untagged
@@ -111,3 +112,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.375, y: 0.2490449}
   m_EdgeRadius: 0
+--- !u!114 &1162777370590648243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7210650640885512252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 0
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 000000009ba76616
+  m_ShapePath:
+  - {x: -1.6875, y: -0.125, z: 0}
+  - {x: -1.6875, y: 1, z: 0}
+  - {x: -1.3110683, y: 0.99824274, z: 0}
+  - {x: -1.3110688, y: 0.7540029, z: 0}
+  - {x: -0.6890487, y: 0.7522458, z: 0}
+  - {x: -0.6925626, y: 0.99999976, z: 0}
+  - {x: -0.3095104, y: 0.9982426, z: 0}
+  - {x: -0.3095107, y: 0.7522457, z: 0}
+  - {x: 0.31075212, y: 0.7522457, z: 0}
+  - {x: 0.3089953, y: 0.99824274, z: 0}
+  - {x: 0.69204724, y: 0.99824226, z: 0}
+  - {x: 0.6902901, y: 0.7540028, z: 0}
+  - {x: 1.3087958, y: 0.75224566, z: 0}
+  - {x: 1.3087958, y: 1.0017565, z: 0}
+  - {x: 1.6875, y: 1, z: 0}
+  - {x: 1.6875, y: -0.125, z: 0}
+  m_ShapePathHash: 2031186171
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 530060

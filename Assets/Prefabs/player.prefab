@@ -340,6 +340,20 @@ MonoBehaviour:
   AttackLocation: {fileID: 4864130022305528445}
   moveSpeed: 5
   rb: {fileID: 3591907674716131526}
+  dashDistance: 5
+  dashDuration: 0.5
+  dashCooldown: 2
+  projectilePrefab: {fileID: 0}
+  projectileSpawnPoint: {fileID: 0}
+  projectileSpeed: 10
+  mudPoolPrefab: {fileID: 0}
+  mudPoolRange: 5
+  UnbushButton: {fileID: 0}
+  ShootButton: {fileID: 0}
+  DashButton: {fileID: 0}
+  TeleportButton: {fileID: 0}
+  SlamButton: {fileID: 0}
+  MudPoolButton: {fileID: 0}
 --- !u!61 &3591907674716131525
 BoxCollider2D:
   m_ObjectHideFlags: 0

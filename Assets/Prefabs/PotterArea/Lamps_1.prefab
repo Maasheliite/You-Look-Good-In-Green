@@ -129,7 +129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.427
+      value: 2.27
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -137,19 +137,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.009535217
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.9999546
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -161,15 +161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1363114342719522830, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278325860811176369, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278325860811176369, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[1]
-      value: 375826331
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7022281571769480781, guid: 5509d2e7815c2394d9995a6ce4ea63b2, type: 3}
       propertyPath: m_Name

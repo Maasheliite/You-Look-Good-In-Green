@@ -104,6 +104,14 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7250604428538580917, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250604428538580917, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
+      propertyPath: m_OverlapOperation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8505825588209883911, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -169,6 +177,14 @@ PrefabInstance:
     - target: {fileID: 5717678614090571867, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250604428538580917, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250604428538580917, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
+      propertyPath: m_OverlapOperation
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8505825588209883911, guid: b55e2c4a818044a4789e57b89471281c, type: 3}
       propertyPath: m_RootOrder
