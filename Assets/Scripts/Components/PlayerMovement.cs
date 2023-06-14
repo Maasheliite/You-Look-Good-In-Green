@@ -1,7 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -83,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float stepDistance = 1f;
     private float stepTimer = 0;
-
+    private List<string> listOfDirtTiles = new List<string> { "GrassTileset_26","GrassTileset_1", "GrassTileset_0", "GrassTileset_8", "GrassTileset_9" };
 
 
     private void Start()
@@ -148,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("Attack", .6f);
                 Invoke("ResetAttack", attackDelay);
             }
-            if (Input.GetButtonDown("Fire1") && CanShoot)
+            if (Input.GetButtonDown("Fire1") && CanShoot && !EventSystem.current.IsPointerOverGameObject())
             {
                 if (isAttacking)
                 {
@@ -241,11 +243,10 @@ public class PlayerMovement : MonoBehaviour
 
                 if (tile is RuleTile ruleTile)
                 {
-                    float previousPitch = audioSource.pitch;
-                    audioSource.pitch = 256 + Random.Range(-20, 20);
-
+                    float previousPitch = audioSource.pitch; 
+                    audioSource.pitch = (Random.Range(0.9f, 1.1f));
                     Sprite tileSprite = tilemap.GetSprite(tilePosition);
-                    if (tileSprite.name.ToLower().Contains("dirt"))
+                    if (listOfDirtTiles.Contains(tileSprite.name))
                     {
                         audioSource.PlayOneShot(stepSoundDirt);
                     }
@@ -253,11 +254,26 @@ public class PlayerMovement : MonoBehaviour
                     {
                         audioSource.PlayOneShot(stepSoundGrass);
                     }
-                    else if (tileSprite.name.ToLower().Contains("ceramic"))
+                    else if (tileSprite.name.ToLower().Contains("tiletileset"))
                     {
                         audioSource.PlayOneShot(stepSoundClay);
                     }
-                    audioSource.pitch = previousPitch;
+                }else
+                {
+                    float previousPitch = audioSource.pitch;
+                    audioSource.pitch = (Random.Range(0.9f, 1.1f));
+                    if (tile.name.ToLower().Contains("dirt"))
+                    {
+                        audioSource.PlayOneShot(stepSoundDirt);
+                    }
+                    else if (tile.name.ToLower().Contains("grass"))
+                    {
+                        audioSource.PlayOneShot(stepSoundGrass);
+                    }
+                    else if (tile.name.ToLower().Contains("tiletileset"))
+                    {
+                        audioSource.PlayOneShot(stepSoundClay);
+                    }
                 }
 
             }

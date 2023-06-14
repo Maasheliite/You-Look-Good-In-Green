@@ -1,6 +1,6 @@
 using Nizu.Util.ScriptableObjects;
 using UnityEngine;
-
+using Nizu.InventorySystem;
 
 public class Animal : MonoBehaviour, IInteractable
 {
@@ -12,12 +12,14 @@ public class Animal : MonoBehaviour, IInteractable
 
     public Transform Player;
 
-    public GameCommand BerryResource;
-    public GameCommand FireflyResource;
-    public GameCommand stickResource;
-    public GameCommand WaterResourse;
-    public GameCommand SapResource;
 
+    public ItemDetails BerryResource;
+    public ItemDetails FireflyResource;
+    public ItemDetails stickResource;
+    public ItemDetails WaterResourse;
+    public ItemDetails SapResource;
+
+    public Inventory inventory;
 
     enum AnimalList
     {
@@ -103,15 +105,16 @@ public class Animal : MonoBehaviour, IInteractable
                 {
                     BearHeal = true;
                 }
-                if (BerryResource.DecreaseValueUntilZero(3) && !BearFed)
+                if (inventory.removeItemOfType(BerryResource, 1) && !BearFed)
                 {
+
                     BearFed = true;
                 }
                 //requirements - healing + food
             }
             else if (AnimalFromList == Animal.AnimalList.Bunny)
             {
-                if (FireflyResource.DecreaseValueUntilZero(5) && !BunnyLit)
+                if (inventory.removeItemOfType(FireflyResource, 3) && !BunnyLit)
                 {
                     BunnyLit = true;
                 }
@@ -119,11 +122,11 @@ public class Animal : MonoBehaviour, IInteractable
             }
             else if (AnimalFromList == Animal.AnimalList.Deer)
             {
-                if (stickResource.DecreaseValueUntilZero(2) && !DeerStick)
+                if (inventory.removeItemOfType(stickResource, 2) && !DeerStick)
                 {
                     DeerStick = true;
                 }
-                if (SapResource.DecreaseValueUntilZero(1) && !DeerSap)
+                if (inventory.removeItemOfType(SapResource, 1) && !DeerSap)
                 {
                     DeerSap = true;
                 }
@@ -152,7 +155,7 @@ public class Animal : MonoBehaviour, IInteractable
             else if (AnimalFromList == Animal.AnimalList.Snail)
             {
 
-                if (WaterResourse.DecreaseValueUntilZero(1) && !SnailWater)
+                if (inventory.removeItemOfType(WaterResourse, 1) && !SnailWater)
                 {
                     SnailWater = true;
                 }

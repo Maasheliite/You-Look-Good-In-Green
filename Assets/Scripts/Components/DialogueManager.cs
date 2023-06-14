@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> sentences;
 
-
+    public Animator animator;
     void Start()
     {
         sentences = new Queue<string>();
@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        animator.SetBool("isOpen", true);
+
         GameStateManager.gameState = GameStateManager.GameState.Paused;
 
         nameText.text = dialogue.name;
@@ -61,6 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        animator.SetBool("isOpen", false);
         GameStateManager.gameState = GameStateManager.GameState.Running;
     }
 }
