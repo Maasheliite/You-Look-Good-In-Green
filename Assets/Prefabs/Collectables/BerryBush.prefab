@@ -102,9 +102,9 @@ MonoBehaviour:
   m_ShadowGroup: 0
   m_ComponentVersion: 1
   m_HasRenderer: 1
-  m_UseRendererSilhouette: 0
+  m_UseRendererSilhouette: 1
   m_CastsShadows: 1
-  m_SelfShadows: 1
+  m_SelfShadows: 0
   m_ApplyToSortingLayers: 000000009ba76616
   m_ShapePath:
   - {x: -0.24779254, y: -0.069514394, z: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   - {x: -0.0045643, y: -0.13488084, z: 0}
   m_ShapePathHash: 1845147442
   m_Mesh: {fileID: 0}
-  m_InstanceId: -85714
+  m_InstanceId: 202640
 --- !u!61 &978723485245542654
 BoxCollider2D:
   m_ObjectHideFlags: 0
