@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3963359801733347322}
   - component: {fileID: 3963359801733347323}
   - component: {fileID: 3963359801733347316}
+  - component: {fileID: 1038076934156859258}
   m_Layer: 0
   m_Name: Well
   m_TagString: Untagged
@@ -123,3 +124,18 @@ PolygonCollider2D:
       - {x: 0.36759144, y: -0.42703152}
       - {x: 0.6986821, y: -0.30126998}
       - {x: 1.0049236, y: 0.016231358}
+--- !u!114 &1038076934156859258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963359801733347317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3befd863bf727c14591a434085918750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredItem: {fileID: 11400000, guid: 779dcbfabacdd9b449cc11dd541d486e, type: 2}
+  itemToGive: {fileID: 6383857355772195280, guid: 4a10b9c66c5e37d4aac58b12983fb2af, type: 3}
+  tradeAmount: -1

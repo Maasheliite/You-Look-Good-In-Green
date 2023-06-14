@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Nizu.Util.ScriptableObjects;
+using UnityEngine;
 
 
 public class Animal : MonoBehaviour, IInteractable
@@ -22,13 +20,13 @@ public class Animal : MonoBehaviour, IInteractable
 
 
     enum AnimalList
-    { 
-    Bear,
-    Deer,
-    Snail,
-    Owl,
-    Eagle,
-    Bunny
+    {
+        Bear,
+        Deer,
+        Snail,
+        Owl,
+        Eagle,
+        Bunny
     }
 
     enum QuestState
@@ -97,11 +95,11 @@ public class Animal : MonoBehaviour, IInteractable
 
     public void onHighlight()
     {
-        if(questState == QuestState.Start)
+        if (questState == QuestState.Start)
         {
             if (AnimalFromList == Animal.AnimalList.Bear)
             {
-                if(Vector2.Distance(Player.transform.position, gameObject.transform.position) < 10f && PlayerMovement.CanHeal && Input.GetKeyDown(KeyCode.H) && !BearHeal)
+                if (Vector2.Distance(Player.transform.position, gameObject.transform.position) < 10f && PlayerMovement.CanHeal && Input.GetKeyDown(KeyCode.H) && !BearHeal)
                 {
                     BearHeal = true;
                 }

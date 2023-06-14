@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b12dd3120660e241a838006bb68349c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <interactButton>k__BackingField: 32
+  <interactButton>k__BackingField: 102
   deathTimerMax: 0.75
   itemCommand: {fileID: 11400000, guid: 9eb39c46f9c5245449481ad9b3c8b1df, type: 2}
   increaseValue: 1
