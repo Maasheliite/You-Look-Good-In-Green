@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -67,19 +68,29 @@ public class PlayerMovement : MonoBehaviour
     public Button MudPoolButton;
 
     //Audioshit
-    private AudioSource audiosource;
+    private AudioSource audioSource;
     public AudioClip hurtSound;
     public AudioClip slamSound;
     public AudioClip mudSound;
     public AudioClip shootSound;
     public AudioClip dashSound;
 
+    //Stepsound stuff
+    public Tilemap tilemap;
+    public AudioClip stepSoundGrass;
+    public AudioClip stepSoundDirt;
+    public AudioClip stepSoundClay;
+
+    public float stepDistance = 1f;
+    private float stepTimer = 0;
+
+
 
     private void Start()
     {
         dist = new Vector2(0.8f, 0.8f);
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        audiosource = gameObject.GetComponent<AudioSource>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -178,6 +189,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (animator.GetFloat("Speed") > 0)
+        {
+            doFootStep();
+        }
+        else
+        {
+            stepTimer = 0;
+        }
+
         if (!isAttacking && !isDashing && (movement.x != 0 || movement.y != 0) && !notClimbing)
         {
             rb.constraints = RigidbodyConstraints2D.None;
@@ -205,6 +225,44 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void doFootStep()
+    {
+        if (stepTimer <= 0)
+        {
+            stepTimer = stepDistance;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+
+            if (hit.collider != null)
+            {
+
+                Vector3Int tilePosition = tilemap.WorldToCell(hit.point);
+
+                TileBase tile = tilemap.GetTile(tilePosition);
+
+                if (tile is RuleTile ruleTile)
+                {
+                    Sprite tileSprite = tilemap.GetSprite(tilePosition);
+                    if (tileSprite.name.ToLower().Contains("dirt"))
+                    {
+                        audioSource.PlayOneShot(stepSoundDirt);
+                    }
+                    else if (tileSprite.name.ToLower().Contains("grass"))
+                    {
+                        audioSource.PlayOneShot(stepSoundGrass);
+                    }
+                    else if (tileSprite.name.ToLower().Contains("ceramic"))
+                    {
+                        audioSource.PlayOneShot(stepSoundClay);
+                    }
+                }
+
+            }
+        }
+
+        stepTimer -= Time.fixedDeltaTime;
+
+    }
+
     private void Freeze()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -229,7 +287,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void LeafAttack()
     {
-        audiosource.PlayOneShot(shootSound);
+        audioSource.PlayOneShot(shootSound);
         GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
         projectile.transform.right = direction;
 
@@ -245,14 +303,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 spawnPosition = transform.position + (mousePosition - transform.position).normalized * mudPoolRange;
 
         Instantiate(mudPoolPrefab, spawnPosition, Quaternion.identity);
-        audiosource.PlayOneShot(mudSound);
+        audioSource.PlayOneShot(mudSound);
     }
 
     private void Dash()
     {
         animator.Play("Dash");
 
-        audiosource.PlayOneShot(dashSound);
+        audioSource.PlayOneShot(dashSound);
         isDashing = true;
         dashTimer = dashDuration;
         dashCooldownTimer = dashCooldown;
@@ -304,7 +362,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        audiosource.PlayOneShot(hurtSound);
+        audioSource.PlayOneShot(hurtSound);
         Health--;
         if (Health <= 0)
         {

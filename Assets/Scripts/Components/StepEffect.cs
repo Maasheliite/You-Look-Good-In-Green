@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StepEffect : MonoBehaviour
@@ -11,7 +10,7 @@ public class StepEffect : MonoBehaviour
     {
         InvokeRepeating("Step", 0, stepDistance);
     }
-    
+
     void Step()
     {
         StartCoroutine(StepCoroutine());
@@ -19,7 +18,7 @@ public class StepEffect : MonoBehaviour
 
     IEnumerator StepCoroutine()
     {
-        var stepObject = Instantiate(stepPrefab, transform.position,Quaternion.identity);
+        ParticleSystem stepObject = Instantiate(stepPrefab, transform.position, Quaternion.identity);
         //float rippleTime = 4f;
         float effectInterval = 0.001f;
         float timer = 0;
@@ -30,8 +29,8 @@ public class StepEffect : MonoBehaviour
         while (stepObject.isPlaying)
         {
             timer += Time.deltaTime;
-           /* stepLight.intensity = 1.5f+Mathf.Sin(timer);
-            stepLight.spotAngle = Mathf.Lerp(1,maxAngle,timer/ rippleTime);*/
+            /* stepLight.intensity = 1.5f+Mathf.Sin(timer);
+             stepLight.spotAngle = Mathf.Lerp(1,maxAngle,timer/ rippleTime);*/
             yield return new WaitForSeconds(effectInterval);
         }
         GameObject.Destroy(stepObject.gameObject);

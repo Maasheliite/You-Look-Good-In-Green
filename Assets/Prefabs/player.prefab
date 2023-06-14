@@ -447,6 +447,11 @@ MonoBehaviour:
   mudSound: {fileID: 0}
   shootSound: {fileID: 0}
   dashSound: {fileID: 0}
+  tilemap: {fileID: 0}
+  stepSoundGrass: {fileID: 8300000, guid: 02ed9d674c0169f478be3e2de90fa8d7, type: 3}
+  stepSoundDirt: {fileID: 8300000, guid: f2a580d71d0170b42b3bb06cf1516350, type: 3}
+  stepSoundClay: {fileID: 8300000, guid: 3faed7488a698c74a8c6edac844f34e1, type: 3}
+  stepDistance: 0.5
 --- !u!61 &3591907674716131525
 BoxCollider2D:
   m_ObjectHideFlags: 0

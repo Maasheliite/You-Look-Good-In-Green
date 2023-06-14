@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Nizu.Util.ScriptableObjects
@@ -9,7 +7,7 @@ namespace Nizu.Util.ScriptableObjects
     {
         public FloatVariable variableToModify;
 
-       public void IncreaseValue(float val)
+        public void IncreaseValue(float val)
         {
             variableToModify.Value += val;
         }
@@ -19,8 +17,9 @@ namespace Nizu.Util.ScriptableObjects
         }
         public bool DecreaseValueUntilZero(float val)
         {
-            if (variableToModify.Value - val < 0) {
-                return false; 
+            if (variableToModify.Value - val < 0)
+            {
+                return false;
             }
             else
             {
@@ -36,8 +35,13 @@ namespace Nizu.Util.ScriptableObjects
         public void DivideValue(float val)
         {
             if (val != 0)
+            {
                 variableToModify.Value /= val;
-            else Debug.Log("Attempted to divide'" + variableToModify.name + "' by zero at" + this);
+            }
+            else
+            {
+                Debug.Log("Attempted to divide'" + variableToModify.name + "' by zero at" + this);
+            }
         }
 
     }
