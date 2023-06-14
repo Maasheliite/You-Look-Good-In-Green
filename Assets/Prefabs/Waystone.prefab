@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1957136030763850642}
   - component: {fileID: 1957136030763850641}
+  - component: {fileID: 4174733624585374603}
+  - component: {fileID: 7109616443239654438}
   m_Layer: 0
   m_Name: Waystone
   m_TagString: Untagged
@@ -85,6 +87,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4174733624585374603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957136030763850640}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0008715987}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.1851852}
+    oldSize: {x: 1, y: 1.6875}
+    newSize: {x: 1, y: 1.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.25544477}
+  m_EdgeRadius: 0
+--- !u!114 &7109616443239654438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957136030763850640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 000000009ba76616
+  m_ShapePath:
+  - {x: -0.38456935, y: -0.2237072, z: 0}
+  - {x: -0.49599063, y: -0.13102287, z: 0}
+  - {x: -0.5, y: 0.75337577, z: 0}
+  - {x: -0.4417623, y: 0.9965136, z: 0}
+  - {x: -0.2539524, y: 1.3112935, z: 0}
+  - {x: 0.007923305, y: 1.3774238, z: 0}
+  - {x: 0.25921825, y: 1.3139387, z: 0}
+  - {x: 0.43644723, y: 0.9965136, z: 0}
+  - {x: 0.49735475, y: 0.7480853, z: 0}
+  - {x: 0.49404895, y: -0.12214357, z: 0}
+  - {x: 0.39788824, y: -0.20594859, z: 0}
+  - {x: 0.23211028, y: -0.30416882, z: 0}
+  - {x: -0.016509563, y: -0.3086084, z: 0}
+  - {x: -0.23405188, y: -0.29972923, z: 0}
+  m_ShapePathHash: 333163084
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -199694
 --- !u!1 &1957136031143047906
 GameObject:
   m_ObjectHideFlags: 0
