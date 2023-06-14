@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -148,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("Attack", .6f);
                 Invoke("ResetAttack", attackDelay);
             }
-            if (Input.GetButtonDown("Fire1") && CanShoot)
+            if (Input.GetButtonDown("Fire1") && CanShoot && !EventSystem.current.IsPointerOverGameObject())
             {
                 if (isAttacking)
                 {
