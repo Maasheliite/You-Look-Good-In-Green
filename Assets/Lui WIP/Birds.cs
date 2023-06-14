@@ -8,7 +8,6 @@ using Nizu.Util.ScriptableObjects;
 public class Birds : MonoBehaviour, IInteractable
 {
     [field: SerializeField]
-    public KeyCode interactButton { get; set; } = KeyCode.None;
 
     private SpriteRenderer spriteRenderer;
     public SetSelfInactive costElement;

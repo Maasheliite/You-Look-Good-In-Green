@@ -6,8 +6,7 @@ using Nizu.Util.ScriptableObjects;
 
 public class Animal : MonoBehaviour, IInteractable
 {
-    [field: SerializeField]
-    public KeyCode interactButton { get; set; } = KeyCode.None;
+
 
     public Dialogue Greeting;
     public Dialogue Waiting;

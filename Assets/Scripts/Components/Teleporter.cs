@@ -9,8 +9,6 @@ using UnityEditor;
 public class Teleporter : MonoBehaviour, IInteractable
 {
     public GameObject target;
-    [field: SerializeField]
-    public KeyCode interactButton { get; set; } = KeyCode.None;
 
     public GameObject getGameObject()
     {

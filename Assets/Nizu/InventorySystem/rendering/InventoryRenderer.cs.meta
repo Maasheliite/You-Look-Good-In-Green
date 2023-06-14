@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1552a4a84beac934780d8e88c9322fbd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - inventoryToRender: {instanceID: 0}
+  - defaultSprite: {instanceID: 0}
+  - SelectorPrefab: {fileID: 650472288273103764, guid: 5206213e20fbd2149a127985a90accce,
+      type: 3}
+  - slotPrefab: {fileID: 650472288273103764, guid: 4a419c88ee45aaa43ac754eb45a69528,
+      type: 3}
+  - itemPrefab: {fileID: 650472288273103764, guid: b9c98cff81ee54b4eb737ad064e9da95,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

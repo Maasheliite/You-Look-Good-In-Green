@@ -8,6 +8,8 @@ public class Actor : MonoBehaviour
     public FloatReference range;
     public GameObject highlightPrefab;
     private GameObject highlight;
+    [field: SerializeField]
+    public KeyCode interactButton { get; set; } = KeyCode.None;
 
     private void OnEnable()
     {
@@ -21,7 +23,7 @@ public class Actor : MonoBehaviour
         HighlightInteractable();
         if (closestInteractable != null)
         {
-            if (Input.GetKeyDown(closestInteractable.interactButton))
+            if (Input.GetKeyDown(interactButton))
             {
                 closestInteractable.Interact(gameObject);
             }

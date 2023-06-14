@@ -65,10 +65,20 @@ public class PlayerMovement : MonoBehaviour
     public Button SlamButton;
     public Button MudPoolButton;
 
+    //Audioshit
+    private AudioSource audiosource;
+    public AudioClip hurtSound;
+    public AudioClip slamSound;
+    public AudioClip mudSound;
+    public AudioClip shootSound;
+    public AudioClip dashSound;
+
+
     private void Start()
     {
         dist = new Vector2(0.8f, 0.8f);
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        audiosource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -212,6 +222,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void LeafAttack()
     {
+        audiosource.PlayOneShot(shootSound);
         GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
         projectile.transform.right = direction;
 
@@ -227,12 +238,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 spawnPosition = transform.position + (mousePosition - transform.position).normalized * mudPoolRange;
 
         Instantiate(mudPoolPrefab, spawnPosition, Quaternion.identity);
+        audiosource.PlayOneShot(mudSound);
     }
 
     private void Dash()
     {
         animator.Play("Dash");
 
+        audiosource.PlayOneShot(dashSound);
         isDashing = true;
         dashTimer = dashDuration;
         dashCooldownTimer = dashCooldown;
@@ -285,6 +298,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        audiosource.PlayOneShot(hurtSound);
         Health--;
     }
 

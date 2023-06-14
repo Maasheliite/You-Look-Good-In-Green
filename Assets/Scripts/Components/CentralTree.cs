@@ -15,9 +15,6 @@ public class CentralTree : MonoBehaviour, IInteractable
 
     private SpriteRenderer spriteRenderer;
 
-    [field: SerializeField]
-    public KeyCode interactButton { get; set; } = KeyCode.None;
-
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

@@ -16,8 +16,6 @@ enum RootState
 
 public class Root : MonoBehaviour, IInteractable
 {
-    [field: SerializeField]
-    public KeyCode interactButton { get; set; } = KeyCode.None;
     private Slider slider;
     public GameObject dangerPrefab;
     public SetSelfInactive costElement;
