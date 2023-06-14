@@ -241,6 +241,9 @@ public class PlayerMovement : MonoBehaviour
 
                 if (tile is RuleTile ruleTile)
                 {
+                    float previousPitch = audioSource.pitch;
+                    audioSource.pitch = 256 + Random.Range(-20, 20);
+
                     Sprite tileSprite = tilemap.GetSprite(tilePosition);
                     if (tileSprite.name.ToLower().Contains("dirt"))
                     {
@@ -254,6 +257,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         audioSource.PlayOneShot(stepSoundClay);
                     }
+                    audioSource.pitch = previousPitch;
                 }
 
             }
