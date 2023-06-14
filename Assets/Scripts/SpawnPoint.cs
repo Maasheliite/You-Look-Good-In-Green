@@ -4,49 +4,51 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    public EnemyController[] enemyPrefabs;
+    public List<GameObject> prefabs;
     public float spawnAreaRadius;
-    public float enabledRadius;
 
     public float spawnInterval = 1f;
-    public int maxMonsterInArea = 3;
+    public int maxObjectsInArea = 3;
 
-    private Transform hero;
-    private List<GameObject> currentEnemyList = new List<GameObject>();
+    private List<GameObject> currentObjectList = new List<GameObject>();
     void Start()
-    { 
-    
-        hero = FindAnyObjectByType<PlayerController>().transform;
-
-        StartCoroutine(this.SpawnMonster());
+    {
+        StartCoroutine(this.SpawnObject());
     }
 
-    IEnumerator SpawnMonster()
+    IEnumerator SpawnObject()
     {
         while (true)
         {
-            if (currentEnemyList.Count < 3 && (transform.position - hero.position).magnitude <= enabledRadius)
-            {// this might actually not work. i dont know what happens to the element in the list if the enemy gets killed.
+            if (currentObjectList.Count < maxObjectsInArea)
+            {
+                GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Count)];
 
-                //pick a random prefab from the list.
-                EnemyController randomEnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-
-                //calculate the random position around this gameobject with the spawn area radius
                 Vector2 randomPositionInRadiusAroundGameObject = transform.position + (Vector3)(Random.insideUnitCircle * spawnAreaRadius);
 
-                //creates new Enemy GameObject from the prefab at the random position with a default rotation.
-                GameObject newEnemy = Instantiate(randomEnemyPrefab.gameObject, randomPositionInRadiusAroundGameObject, Quaternion.identity);
+                GameObject newbject = Instantiate(randomPrefab.gameObject, randomPositionInRadiusAroundGameObject, Quaternion.identity);
 
-                currentEnemyList.Add(newEnemy);
+                currentObjectList.Add(newbject);
             }
             yield return new WaitForSeconds(spawnInterval);
         }
     }
-   
 
- 
-    void Update()
+    void FixedUpdate()
     {
+        List<GameObject> objectsToRemove = new List<GameObject>();
 
+        foreach (GameObject obj in currentObjectList)
+        {
+            if (!obj.activeSelf)
+            {
+                objectsToRemove.Add(obj);
+            }
+        }
+
+        foreach (GameObject obj in objectsToRemove)
+        {
+            currentObjectList.Remove(obj);
+        }
     }
 }
