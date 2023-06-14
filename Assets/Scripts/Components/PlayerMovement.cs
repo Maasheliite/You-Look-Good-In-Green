@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -127,7 +126,10 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire2") && CanSlam)
             {
-                if (isAttacking) return;
+                if (isAttacking)
+                {
+                    return;
+                }
 
                 animator.SetBool("isAttacking", true);
 
@@ -137,7 +139,10 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1") && CanShoot)
             {
-                if (isAttacking) return;
+                if (isAttacking)
+                {
+                    return;
+                }
 
                 animator.SetBool("isLeafAttacking", true);
 
@@ -164,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
                     Dash();
                 }
             }
-            if (Input.GetKeyDown(KeyCode.H) && HealTimer<=Time.time && CanHeal == true)
+            if (Input.GetKeyDown(KeyCode.H) && HealTimer <= Time.time && CanHeal == true)
             {
                 PerformHeal();
             }
@@ -295,7 +300,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    
+
 
     public void TakeDamage(int damage)
     {
@@ -387,4 +392,55 @@ public class PlayerMovement : MonoBehaviour
             SkillPoints--;
         }
     }
+
+    internal void Heal(int value)
+    {
+        Health += value;
+    }
+
+    private static PlayerMovement instance;
+
+    // Public property to access the singleton instance
+    public static PlayerMovement Instance
+    {
+        get
+        {
+            // Check if the instance is null
+            if (instance == null)
+            {
+                // Find an existing instance in the scene
+                instance = FindObjectOfType<PlayerMovement>();
+
+                // If no instance exists, create a new GameObject and add the script to it
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject(typeof(PlayerMovement).Name);
+                    instance = singletonObject.AddComponent<PlayerMovement>();
+                }
+
+                // Make the instance persist across scene changes
+                DontDestroyOnLoad(instance.gameObject);
+            }
+
+            return instance;
+        }
+    }
+
+    // Optional: Add any other methods or variables you need for your singleton script
+
+    private void Awake()
+    {
+        // Check if an instance already exists when the script is loaded
+        if (instance != null && instance != this)
+        {
+            // Destroy the duplicate instance if there is one
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Set the instance if it doesn't already exist
+            instance = this;
+        }
+    }
+
 }

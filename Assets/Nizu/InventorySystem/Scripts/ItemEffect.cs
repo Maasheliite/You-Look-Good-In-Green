@@ -1,37 +1,34 @@
-﻿using UnityEngine;
-
-namespace Nizu.InventorySystem
+﻿namespace Nizu.InventorySystem
 {
     public enum ItemEffectOptions
     {
         NO_ACTION,
-        ACTION
+        HEAL_PLAYER
     }
 
 
     public static class ItemEffect
     {
-        public static void DoAction(ItemEffectOptions effect, GameObject target, float value)
+        public static void DoAction(ItemEffectOptions effect)
         {
             switch (effect)
             {
                 case ItemEffectOptions.NO_ACTION:
-                    NoAction(target, value);
+                    NoAction();
                     break;
-                case ItemEffectOptions.ACTION:
-                    SomeAction(target, value);
+                case ItemEffectOptions.HEAL_PLAYER:
+                    HealPlayer();
                     break;
             }
         }
 
-        private static void NoAction(GameObject target, float value)
+        private static void NoAction()
         {
             return;
         }
-        private static void SomeAction(GameObject target, float value)
+        private static void HealPlayer()
         {
-            Debug.Log("action performed");
-            return;
+            PlayerMovement.Instance.Heal(10);
         }
 
 

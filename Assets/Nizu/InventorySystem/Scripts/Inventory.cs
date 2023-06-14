@@ -47,9 +47,13 @@ namespace Nizu.InventorySystem
             {
                 if (items[selectedSlot] != null)
                 {
-                    ItemEffect.DoAction(items[selectedSlot].itemDetails.effect,
-                        items[selectedSlot].itemDetails.actionTarget,
-                        items[selectedSlot].itemDetails.actionValue);
+                    ItemEffect.DoAction(items[selectedSlot].itemDetails.effect);
+                    items[selectedSlot].stackSize -= 1;
+                    if (items[selectedSlot].stackSize <= 0)
+                    {
+                        items[selectedSlot] = null;
+                    }
+
                 }
             }
         }
@@ -100,8 +104,8 @@ namespace Nizu.InventorySystem
             bool isItemAdded = false;
             for (int j = 0; j < slotCount && !isItemAdded; j++)
             {
-                    inventoryUpdated.Raise();
-                    isItemAdded = AddItem(item, j);
+                inventoryUpdated.Raise();
+                isItemAdded = AddItem(item, j);
                 if (isItemAdded)
                 {
                     return true;
@@ -111,7 +115,7 @@ namespace Nizu.InventorySystem
             Debug.LogWarning("Inventory is full.");
             return false;
         }
-    
+
         public bool AddItem(InventoryItem item, int slotIndex)
         {
             if (slotIndex < 0 || slotIndex >= slotCount)
@@ -204,6 +208,36 @@ namespace Nizu.InventorySystem
             {
                 SetSelection(selectedSlot + 1);
             }
+        }
+        internal bool contains(ItemDetails requiredItem)
+        {
+            foreach (InventoryItem item in items)
+            {
+                if (item.Equals(requiredItem))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        internal bool removeItemOfType(ItemDetails requiredItem, int amount)
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].Equals(requiredItem))
+                {
+                    if (items[i].stackSize == amount)
+                    {
+                        items[i] = null;
+                    }
+                    else if (items[i].stackSize > amount)
+                    {
+                        items[i].stackSize -= amount;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

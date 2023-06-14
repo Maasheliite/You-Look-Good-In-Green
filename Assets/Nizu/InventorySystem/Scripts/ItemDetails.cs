@@ -11,7 +11,5 @@ namespace Nizu.InventorySystem
         [Range(1, 100)]
         public int maxStackSize;
         public ItemEffectOptions effect;
-        public GameObject actionTarget;
-        public float actionValue;
     }
 }

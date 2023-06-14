@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3873850050379465804}
   - component: {fileID: 3873850050379465907}
   - component: {fileID: 3873850050379465806}
+  - component: {fileID: -5870494949829202805}
   m_Layer: 0
   m_Name: ClayPile
   m_TagString: Untagged
@@ -123,3 +124,18 @@ PolygonCollider2D:
       - {x: 0.3284539, y: 0.33802566}
       - {x: 0.31809554, y: 0.46447074}
       - {x: 0.21873277, y: 0.625}
+--- !u!114 &-5870494949829202805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873850050379465906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0212012d5bfb3e041a1ffb7a68cc2784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToGive: {fileID: 8713623060430254986, guid: 5d24b701c8a2a514a9e49701d94200f8, type: 3}
+  itemAmount: 3
+  removedAfterDepletion: 1

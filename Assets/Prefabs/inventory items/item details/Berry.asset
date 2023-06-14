@@ -17,5 +17,3 @@ MonoBehaviour:
   itemType: berry
   maxStackSize: 16
   effect: 1
-  actionTarget: {fileID: 0}
-  actionValue: 0

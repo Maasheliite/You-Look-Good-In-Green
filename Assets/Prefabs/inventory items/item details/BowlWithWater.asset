@@ -15,7 +15,5 @@ MonoBehaviour:
   inventorySprite: {fileID: -627489387, guid: bd1663cd3f08f6a4495d3c979dba0a28, type: 3}
   isStackable: 0
   itemType: bowlwithwater
-  maxStackSize: 0
-  effect: 1
-  actionTarget: {fileID: 0}
-  actionValue: 0
+  maxStackSize: 1
+  effect: 0

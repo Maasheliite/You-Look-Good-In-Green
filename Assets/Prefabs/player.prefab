@@ -425,6 +425,7 @@ MonoBehaviour:
   animator: {fileID: 1035679508}
   AttackObject: {fileID: 7332915967631122260, guid: abc7cd3b1ab915044bb4d65e7ccb7f14, type: 3}
   AttackLocation: {fileID: 4864130022305528445}
+  RespawnPoint: {fileID: 0}
   moveSpeed: 5
   rb: {fileID: 3591907674716131526}
   dashDistance: 5
@@ -432,7 +433,7 @@ MonoBehaviour:
   dashCooldown: 2
   projectilePrefab: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
-  projectileSpeed: 10
+  projectileSpeed: 7.37
   mudPoolPrefab: {fileID: 0}
   mudPoolRange: 5
   UnbushButton: {fileID: 0}
@@ -536,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d90694d8d5b44c4fb66572128b1bfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotCount: 10
+  slotCount: 8
   items: []
   inventoryUpdated: {fileID: 11400000, guid: 35d6b51158ad7324e84f89bf3fd20add, type: 2}
   selectedSlot: 0
