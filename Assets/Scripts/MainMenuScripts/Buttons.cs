@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
     public string nextSceneName;
-    public void PlayButton()
+    public void NextSceneButton()
     {
         SceneManager.LoadScene(nextSceneName);
     }
+
     public void QuitButton()
     {
         Application.Quit();
