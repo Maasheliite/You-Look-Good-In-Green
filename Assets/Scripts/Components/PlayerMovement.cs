@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject AttackObject;
     public Transform AttackLocation;
 
+    public Transform RespawnPoint;
+
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
@@ -157,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 dashCooldownTimer -= Time.deltaTime;
 
-                if (dashCooldownTimer <= 0f && Input.GetKeyDown(KeyCode.Mouse1) && CanDash && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
+                if (dashCooldownTimer <= 0f && Input.GetKeyDown(KeyCode.Space) && CanDash && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0))
                 {
                     Dash();
                 }
@@ -290,7 +292,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Health = MaxHealth;
         HealTimer = Time.time + 20f;
-        Debug.Log("heal");
 
     }
 
@@ -300,7 +301,25 @@ public class PlayerMovement : MonoBehaviour
     {
         audiosource.PlayOneShot(hurtSound);
         Health--;
+        if (Health <= 0)
+        {
+            Die();
+        }
     }
+
+    public void Die()
+    {
+        animator.Play("Die");
+        Invoke("Revive", 1.25f);
+    }
+
+    public void Revive()
+    {
+        gameObject.transform.position = RespawnPoint.position;
+        animator.Play("Revive");
+        Health = MaxHealth;
+    }
+
 
     public void ActivateDash()
     {
