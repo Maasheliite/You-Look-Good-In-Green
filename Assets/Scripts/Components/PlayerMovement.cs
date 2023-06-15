@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool notClimbing;
 
+    public Slider healthS;
+
     // Dash Variables
     public float dashDistance = 5f;
     public float dashDuration = 0.5f;
@@ -99,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        healthS.value = (float) Health / MaxHealth;
         if (GameStateManager.gameState == GameStateManager.GameState.Running)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
