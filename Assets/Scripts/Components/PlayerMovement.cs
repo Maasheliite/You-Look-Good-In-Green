@@ -150,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 animator.SetBool("isAttacking", true);
+                audioSource.PlayOneShot(slamSound);
 
                 isAttacking = true;
                 Invoke("Attack", .6f);
