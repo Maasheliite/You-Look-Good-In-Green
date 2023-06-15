@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject AttackObject;
     public Transform AttackLocation;
-
+    public Camera camera;
     public Transform RespawnPoint;
 
     public float moveSpeed = 5f;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     //mud pool variables
     public GameObject mudPoolPrefab;
-    public float mudPoolRange = 5f;
+    public float mudPoolRange = 15f;
 
 
     //All Buttons
@@ -324,11 +324,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void SpawnMudPool()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 spawnPosition = transform.position + (mousePosition - transform.position).normalized * mudPoolRange;
 
-        Instantiate(mudPoolPrefab, spawnPosition, Quaternion.identity);
+        GameObject b = Instantiate(mudPoolPrefab, spawnPosition, Quaternion.identity);
         audioSource.PlayOneShot(mudSound);
+        Destroy(b, 3f);
     }
 
     private void Dash()
