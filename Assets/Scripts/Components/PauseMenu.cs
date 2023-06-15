@@ -7,8 +7,9 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject pauseMenuUI;
-
+    public GameObject skillTree;
     public GameObject usualCanvas;
+    private bool isSkillUp;
 
     void Update()
     {
@@ -26,22 +27,51 @@ public class PauseMenu : MonoBehaviour
 
         }
 
-
-        void Resume()
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            pauseMenuUI.SetActive(false);
-            usualCanvas.SetActive(true);
-            GameStateManager.gameState = GameStateManager.GameState.Running;
+            if (!isSkillUp)
+            {
+                SkillTree();
+                isSkillUp = true;
+            }
+            else
+            {
+                EndSkill();
+                isSkillUp = false;
+            }
         }
-
-        void Pause()
-        {
-            pauseMenuUI.SetActive(true);
-            usualCanvas.SetActive(false);
-            GameStateManager.gameState = GameStateManager.GameState.Paused;
-        }
+        
 
 
     }
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        usualCanvas.SetActive(true);
+        GameStateManager.gameState = GameStateManager.GameState.Running;
+    }
 
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        usualCanvas.SetActive(false);
+        GameStateManager.gameState = GameStateManager.GameState.Paused;
+    }
+
+
+    public void SkillTree()
+    {
+        skillTree.SetActive(true);
+        usualCanvas.SetActive(false);
+        GameStateManager.gameState = GameStateManager.GameState.Paused;
+
+    }
+
+    public void EndSkill()
+    {
+        skillTree.SetActive(false);
+        usualCanvas.SetActive(true);
+        GameStateManager.gameState = GameStateManager.GameState.Running;
+
+    }
 }

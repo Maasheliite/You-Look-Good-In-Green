@@ -21,6 +21,8 @@ public class Animal : MonoBehaviour, IInteractable
 
     public Inventory inventory;
 
+    public Animator animator;
+
     enum AnimalList
     {
         Bear,
@@ -63,6 +65,10 @@ public class Animal : MonoBehaviour, IInteractable
     private bool SnailWater;
     private bool SnailHeal;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public GameObject getGameObject()
     {
@@ -178,6 +184,8 @@ public class Animal : MonoBehaviour, IInteractable
             if (BearHeal && BearFed)
             {
                 success = true;
+                animator.Play("BearMid");
+
             }
         }
         else if (AnimalName == Animal.AnimalList.Bunny)
@@ -186,6 +194,7 @@ public class Animal : MonoBehaviour, IInteractable
             if (BunnyLit)
             {
                 success = true;
+                animator.Play("BunnyMid");
             }
         }
         else if (AnimalName == Animal.AnimalList.Deer)
@@ -193,6 +202,8 @@ public class Animal : MonoBehaviour, IInteractable
             if (DeerStick && DeerSap)
             {
                 success = true;
+                animator.Play("DeerMid");
+
             }
             //requirements - branches
         }
@@ -201,6 +212,8 @@ public class Animal : MonoBehaviour, IInteractable
             if (WingFixed && EagleHeal)
             {
                 success = true;
+                animator.Play("EagleMid");
+
             }
 
             //requirements - grass blades
@@ -210,6 +223,8 @@ public class Animal : MonoBehaviour, IInteractable
             if (OwlHeal)
             {
                 success = true;
+                animator.Play("OwlMid");
+
             }
 
             //requirements - healing
@@ -219,6 +234,8 @@ public class Animal : MonoBehaviour, IInteractable
             if (SnailWater && SnailHeal)
             {
                 success = true;
+                animator.Play("SnailMid");
+
             }
             //requirements - water
         }
