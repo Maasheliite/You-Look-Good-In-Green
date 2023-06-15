@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 6}
   m_SizeDelta: {x: 1260, y: 682}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6512208385543934639
@@ -117,10 +117,10 @@ RectTransform:
   m_Father: {fileID: 6512208385543934633}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 906.25, y: 1206.25}
+  m_SizeDelta: {x: -353.75, y: 524.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6512208386823821186
 CanvasRenderer:
@@ -458,6 +458,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4908146924539655103, guid: 02a2d04fb28022748b8e6a130c414ac4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateMud
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02a2d04fb28022748b8e6a130c414ac4, type: 3}
 --- !u!224 &6512208387234423782 stripped
@@ -472,6 +476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6512208386823821196}
     m_Modifications:
+    - target: {fileID: 8752956910519260128, guid: 863d06d7879383345856d55dafbf9c4c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateShoot
+      objectReference: {fileID: 0}
     - target: {fileID: 8752956910519260129, guid: 863d06d7879383345856d55dafbf9c4c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -574,6 +582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6512208386823821196}
     m_Modifications:
+    - target: {fileID: 7369958842232865976, guid: eaec576e45c230747b91cf37a7e2ce47, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateTeleport
+      objectReference: {fileID: 0}
     - target: {fileID: 7369958842232865977, guid: eaec576e45c230747b91cf37a7e2ce47, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -764,6 +776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1405245218171943415, guid: 0458c32631935cf4db9d611577b22ab5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateSlam
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0458c32631935cf4db9d611577b22ab5, type: 3}
 --- !u!224 &6512208387188688656 stripped
@@ -866,6 +882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1249496401680192567, guid: 26ba8ac199f78ef4684b54e750f16075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateUnbush
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26ba8ac199f78ef4684b54e750f16075, type: 3}
 --- !u!224 &6512208385810142072 stripped
@@ -963,6 +983,14 @@ PrefabInstance:
     - target: {fileID: 1574849258282558624, guid: 6b0f1b461d6947d429dffc6c4048fcbd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574849258282558625, guid: 6b0f1b461d6947d429dffc6c4048fcbd, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574849258282558625, guid: 6b0f1b461d6947d429dffc6c4048fcbd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateHeal
       objectReference: {fileID: 0}
     - target: {fileID: 1574849258282558639, guid: 6b0f1b461d6947d429dffc6c4048fcbd, type: 3}
       propertyPath: m_Name

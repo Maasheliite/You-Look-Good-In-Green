@@ -585,10 +585,10 @@ MonoBehaviour:
 
     E - interact
 
-    Space - inventory
+    C - use item
 
-    Left
-    Mouse - Attack'
+    l
+    - drop item'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa8f22567440f5d4b87456991af1de27, type: 2}
   m_sharedMaterial: {fileID: -1453741558281650267, guid: fa8f22567440f5d4b87456991af1de27, type: 2}
@@ -1927,6 +1927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 5117134937201898175}
+  skillTree: {fileID: 0}
   usualCanvas: {fileID: 0}
 --- !u!1 &5117134938576926113
 GameObject:
