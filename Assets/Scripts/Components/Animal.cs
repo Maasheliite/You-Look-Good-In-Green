@@ -23,6 +23,8 @@ public class Animal : MonoBehaviour, IInteractable
 
     public Animator animator;
 
+    public GameObject fireflies;
+
     enum AnimalList
     {
         Bear,
@@ -195,6 +197,7 @@ public class Animal : MonoBehaviour, IInteractable
             {
                 success = true;
                 animator.Play("BunnyMid");
+                fireflies.SetActive(true);
             }
         }
         else if (AnimalName == Animal.AnimalList.Deer)
