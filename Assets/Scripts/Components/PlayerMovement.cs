@@ -76,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip mudSound;
     public AudioClip shootSound;
     public AudioClip dashSound;
+    public AudioClip dieSound;
+    public AudioClip reviveSound;
 
     //Stepsound stuff
     public Tilemap tilemap;
@@ -393,6 +395,7 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         animator.Play("Die");
+        audioSource.PlayOneShot(dieSound);
         Invoke("Revive", 1.25f);
     }
 
@@ -400,6 +403,7 @@ public class PlayerMovement : MonoBehaviour
     {
         gameObject.transform.position = RespawnPoint.position;
         animator.Play("Revive");
+        audioSource.PlayOneShot(reviveSound);
         Health = MaxHealth;
     }
 
