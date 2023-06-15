@@ -7,7 +7,7 @@ namespace Nizu.InventorySystem
 
         public InventoryItem itemToGive;
         //-1 is infinite
-        public int itemAmount = -1;
+        public int itemAmount = 1;
         public bool removedAfterDepletion = false;
 
         private bool canBeInteractedWith = true;
