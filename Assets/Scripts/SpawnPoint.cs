@@ -15,7 +15,15 @@ public class SpawnPoint : MonoBehaviour
     {
         StartCoroutine(this.SpawnObject());
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, 1);
 
+        UnityEditor.Handles.color = Color.red;
+        Vector3 direction = new Vector3(0, 0, 1);
+        UnityEditor.Handles.DrawWireDisc(transform.position, direction, spawnAreaRadius);
+    }
     IEnumerator SpawnObject()
     {
         while (true)
@@ -33,7 +41,7 @@ public class SpawnPoint : MonoBehaviour
             yield return new WaitForSeconds(spawnInterval);
         }
     }
-
+   
     void FixedUpdate()
     {
         List<GameObject> objectsToRemove = new List<GameObject>();

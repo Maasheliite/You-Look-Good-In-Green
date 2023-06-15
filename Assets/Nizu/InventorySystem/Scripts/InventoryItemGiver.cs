@@ -24,7 +24,9 @@ namespace Nizu.InventorySystem
                 Inventory inventory = actor.GetComponent<Inventory>();
                 if (inventory != null)
                 {
-                    bool itemAddedToInventory = inventory.AddItem(itemToGive);
+                    InventoryItem newItem = Instantiate(itemToGive, actor.transform.position, Quaternion.identity);
+                    newItem.gameObject.SetActive(false);
+                    bool itemAddedToInventory = inventory.AddItem(newItem);
                     if (itemAddedToInventory)
                     {
                         itemAmount--;
@@ -33,13 +35,13 @@ namespace Nizu.InventorySystem
                             canBeInteractedWith = false;
                             if (removedAfterDepletion)
                             {
-                                StartCoroutine("FadeOut");
+                                StartCoroutine(FadeOut(0.5f));
                             }
                         }
                     }
                     else
                     {
-                        //item cant be picked up, inventory full.
+                        Destroy(newItem);
                     }
                 }
                 else

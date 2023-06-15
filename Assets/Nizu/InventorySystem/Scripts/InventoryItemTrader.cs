@@ -25,6 +25,7 @@ namespace Nizu.InventorySystem
                 {
                     if (inventory.removeItemOfType(requiredItem, 1))
                     {
+                        Debug.Log("did shit");
                         bool itemAddedToInventory = inventory.AddItem(itemToGive);
                         if (itemAddedToInventory)
                         {

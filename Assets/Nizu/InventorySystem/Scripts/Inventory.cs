@@ -91,21 +91,12 @@ namespace Nizu.InventorySystem
 
         public bool AddItem(InventoryItem item)
         {
-            for (int i = 0; i < slotCount; i++)
-            {
-                if (i < items.Count && items[i] is not null)
-                {
-                    if (items[i].itemDetails.itemType == item.itemDetails.itemType)
-                    {
-                        return AddItem(item, i);
-                    }
-                }
-            }
+
             bool isItemAdded = false;
             for (int j = 0; j < slotCount && !isItemAdded; j++)
             {
-                inventoryUpdated.Raise();
                 isItemAdded = AddItem(item, j);
+                inventoryUpdated.Raise();
                 if (isItemAdded)
                 {
                     return true;
@@ -221,23 +212,26 @@ namespace Nizu.InventorySystem
             return false;
         }
 
-        internal bool removeItemOfType(ItemDetails requiredItem, int amount)
+internal bool removeItemOfType(ItemDetails requiredItem, int amount)
+{
+    for (int i = 0; i < items.Count; i++)
+    {
+        if (items[i] != null && items[i].itemDetails.itemType == requiredItem.itemType)
         {
-            for (int i = 0; i < items.Count; i++)
-            {
-                if (items[i].Equals(requiredItem))
-                {
-                    if (items[i].stackSize == amount)
+            if (items[i].stackSize == amount)
                     {
+                        inventoryUpdated.Raise();
                         items[i] = null;
-                    }
-                    else if (items[i].stackSize > amount)
-                    {
-                        items[i].stackSize -= amount;
-                    }
-                }
+                        return true;
             }
-            return false;
+            else if (items[i].stackSize > amount)
+            {
+                items[i].stackSize -= amount;
+                        return true;
+                    }
         }
+    }
+    return false;
+}
     }
 }
